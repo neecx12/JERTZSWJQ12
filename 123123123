@@ -392,7 +392,17 @@
             </div>
 
             <div class="quote-again-div">
-            <script>
+                <a class="quote-again-anchor" onclick="navigateToDeliveryDetails()"><img style="padding-right: 5px; width:24px;" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/chevron-left-lg.svg" data-pagespeed-url-hash="1459207396" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">Get another
+                    quote</a>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>
+<script>
 //declare html elements
 const registrationPagePopup = document.getElementById("registrationPagePopup");
 const quickQuotePopup = document.getElementById("quickQuotePopup");
@@ -1279,17 +1289,7 @@ function displayErrors() {
 }
 
 </script>
-                <a class="quote-again-anchor" onclick="navigateToDeliveryDetails()"><img style="padding-right: 5px; width:24px;" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/chevron-left-lg.svg" data-pagespeed-url-hash="1459207396" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">Get another
-                    quote</a>
- <!-- end detail api fetcg -->
- <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+<!-- end detail api fetcg -->
+<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
 </script>-->
-<div class="pb-lg-4 mb-5">
-          <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQPklmkB_SF3Sx00TNRzs21qrmR9DT2_s&amp;sensor=false&amp;libraries=places" type="text/javascript"></script>
-
-
-
-
-
-
