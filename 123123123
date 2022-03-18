@@ -1,0 +1,2592 @@
+<div id="framebody" class="fullwidth quick-quote-form">
+    <div style="padding-bottom: 20px;" class="hidden" id="registrationPagePopup">
+        <div id="registrationPage">
+            <div style="min-height: 57px; margin-top: 15px;">
+                <header style="float: left; margin-top: 20px;" class="header-style">Register</header>
+                <button onclick="quotePage()" style="float: right;
+                background: transparent;
+                border-radius: 5px;
+                outline: none;
+                border: 0px solid transparent;
+                color: white;
+                padding: 0px;">
+
+                    <img style="height:25px; width: 25px;" src="https://unpkg.com/ionicons@5.5.1/dist/svg/close-circle-outline.svg" data-pagespeed-url-hash="3369767790" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                </button>
+            </div>
+
+
+            <div>
+                <label class="label-style">Create an account. It's free and only takes a minute.</label>
+            </div>
+            <div>
+                <div style="width: 50%;float:left;padding: 0px 5px 0px 0px;">
+                    <div class="input-label-div">
+                        <label class="input-label">First Name <span class="required-span">*</span></label>
+                    </div>
+                    <div>
+                        <input class="input-field" oninput="autoRemoveErrors()" id="firstName">
+                    </div>
+                    <label id="errorFirstName" class="hidden-text">First name is required</label>
+                </div>
+
+
+                <div style="width: 50%; float:right;padding: 0px 0px 0px 5px;">
+                    <div class="input-label-div">
+                        <label class="input-label">Last Name <span class="required-span">*</span></label>
+                    </div>
+
+                    <div>
+                        <input class="input-field" oninput="autoRemoveErrors()" id="lastName">
+                    </div>
+                    <label id="errorLastName" class="hidden-text">Last name is required</label>
+                </div>
+
+            </div>
+
+            <div>
+                <div style="width: 50%;float:left;padding: 0px 5px 0px 0px;">
+                    <div class="input-label-div">
+                        <label class="input-label">Contact Number <span class="required-span">*</span></label>
+                    </div>
+                    <div id="contactNumberDiv" class="contact-number-div">
+                        <label>+44</label>
+                        <input class="input-field" oninput="autoRemoveErrors()" id="contactNumber" type="tel" maxlength="11">
+                    </div>
+                    <label id="errorContactNumber" class="hidden-text">Contact number required</label>
+                </div>
+
+
+                <div style="width: 50%; float:right;padding: 0px 0px 0px 5px;">
+                    <div class="input-label-div">
+                        <label class="input-label">Email Address <span class="required-span">*</span></label>
+                    </div>
+                    <div>
+                        <input class="input-field" oninput="autoRemoveErrors()" id="emailAddress">
+                    </div>
+                    <label id="errorEmailAddress" class="hidden-text">Email address required</label>
+                </div>
+
+            </div>
+
+            <div style="display: inline;">
+                <div style="width: 50%; float:left;padding: 0px 5px 0px 0px;">
+                    <div class="input-label-div">
+                        <label class="input-label">Password <span class="required-span">*</span></label>
+                        <label class="password-hint">Min 8 characters</label>
+                    </div>
+                    <div class="lol">
+                        <input class="input-field" oninput="autoRemoveErrors()" type="password" id="password">
+                        <img id="passwordImg" onclick="togglePasswordView()" src="https://unpkg.com/ionicons@5.5.1/dist/svg/eye-off-outline.svg" data-pagespeed-url-hash="811706064" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                    </div>
+
+                    <label id="errorPassword" style="position: relative;" class="hidden-text">Please enter your
+                        password</label>
+                </div>
+
+                <div style="width: 50%; float:right;padding: 0px 0px 0px 5px;">
+                    <div class="input-label-div">
+                        <label class="input-label">Confirm Password <span class="required-span">*</span></label>
+                    </div>
+                    <div class="lol">
+                        <input class="input-field" oninput="autoRemoveErrors()" type="password" id="passwordConfirm">
+                        <img id="passwordConfirmImg" onclick="togglePasswordConfirmView()" src="https://unpkg.com/ionicons@5.5.1/dist/svg/eye-off-outline.svg" data-pagespeed-url-hash="811706064" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                    </div>
+                    <label id="errorPasswordConfirm" style="position: relative;" class="hidden-text">Please confirm
+                        your password</label>
+                </div>
+            </div>
+
+            <div class="input-label-div">
+                <label class="tos-label" style="width: 100%;
+            margin: 0px 0px 15px 0px !important;"><span class="required-span">*</span> indicates required
+                    field</label>
+            </div>
+
+            <button class="submit-button" onclick="submitRegistration()">Submit</button>
+            <label class="hidden" id="additionalError">(message)</label>
+        </div>
+        <div id="registrationConfirmation" class="hidden">
+            <div style="min-height: 57px; margin-top: 15px;">
+                <header class="confirmation-header">Thank you for registering.</header>
+                <button onclick="quotePage()" style="float: right;
+            background: transparent;
+            border-radius: 5px;
+            outline: none;
+            border: 0px solid transparent;
+            color: white;
+            position: absolute;
+            top: 20px;
+            right: 60px;
+            ">
+
+                    <img style="height: 25px;
+            width: 25px;
+            position: absolute;
+            top: -5px;" src="https://unpkg.com/ionicons@5.5.1/dist/svg/close-circle-outline.svg" data-pagespeed-url-hash="3369767790" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                </button>
+            </div>
+            <div>
+                <img class="van-image" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/93436.svg" data-pagespeed-url-hash="2908271510" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+            </div>
+
+            <label class="confirmation-label">Please <a class="tos-link" onclick="navigateToLogin()">log in</a> to
+                book your delivery or alternatively, download our app.</label>
+            <div style="display: flex;">
+                <div class="app-icon-left"><img class="app-icon-left-img" onclick="navigateToPlayStore()" src="https://823366.smushcdn.com/2296410/wp-content/themes/deliveryapp/images/google-play-badge-new-1.png?lossy=1&amp;strip=1&amp;webp=1" data-pagespeed-url-hash="1853975828" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                </div>
+                <div class="app-icon-right"><img class="app-icon-right-img" onclick="navigateToIosStore()" src="https://823366.smushcdn.com/2296410/wp-content/themes/deliveryapp/images/perfect-appstore-badge.png?lossy=1&amp;strip=1&amp;webp=1" data-pagespeed-url-hash="1245691977" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="quickQuotePopup">
+    <div style="text-align: center; padding-bottom:20px;">
+
+    <h4 class="qck">Get Your Free Quote</h4>
+
+    </div>
+        <div class="progress-tracker-div" id="progressTracker">
+            <div class="tracker-item-one tracker-item-active" onclick="navigateToDeliveryDetails()" id="trackerItemOne"><label id="trackerLabelOne" class="tracker-label tracker-label-active">1</label>
+            </div>
+            <div class="tracker-item-two" onclick="submitQuote()" id="trackerItemTwo"><label id="trackerLabelTwo" class="tracker-label">2</label></div>
+        </div>
+        <div class="progress-label-div" id="progressTracker">
+            <label class="progress-label-title right font-style tracker-label-subtitle label-left">Delivery
+                Details</label>
+            <label class="progress-label-title font-style-small tracker-label-subtitle"></label>
+            <label class="progress-label-title left font-style tracker-label-subtitle label-right">Vehicle
+                Prices</label>
+        </div>
+        <div class="" id="frameStepOne">
+            
+            <div class="row">
+
+                <div class="input-item-left col-md-12">
+
+                    <div class="wildcard-style col-md-12">
+                        <p class="input-field-label font-style-large">
+                            Pick-up Postcode *
+                        </p>
+                    </div>
+
+                    <div class="input-container col-md-12" id="inputContainerPickup" style="background: #EDEDED;border-radius:5px;"><img src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/location_symbol.svg" style="background:transparent;" data-pagespeed-url-hash="4121082883" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                        <input class="input-field-quote pick-location " id="input-pickup" type="text" oninput="autocapitaliseFieldPickup()" placeholder="e.g. M3 4AP" name="usrnm" style="background: #EDEDED;border: 0px;color:#223039;">
+                        <span class="postcode_pickup_error" style="color: red;"><label class="hidden" id="errorLabelPickup"><img class="error-img" id="error-svg" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/bx_bxs-error.svg" data-pagespeed-url-hash="2925039386" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"><span class="error-span" id="errorSpanPickup"> The pick-up postcode is
+                                    required</span></label></span>
+                    </div>
+                </div>
+
+                <div class="input-item-right col-md-12">
+                    <div class="wildcard-style col-md-12">
+                        <p class="input-field-label font-style-large">
+                            Drop-off Postcode *
+                        </p>
+                    </div>
+
+                    <div class="input-container col-md-12" id="inputContainerDropoff" style="background:#EDEDED; border-radius:5px;"><img src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/location_symbol.svg" style="background:transparent;" width="20%" height="auto" data-pagespeed-url-hash="4121082883" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                        <input class="input-field-quote delivery-location" id="input-dropoff" type="text" oninput="autocapitaliseFieldDropoff()" placeholder="e.g. B5 5PN" name="usrnm" style="background:transparent;border: 0px;color:#223039;">
+                        <span class="postcode_pickup_error" style="color: red;"><label class="hidden" id="errorLabelDropoff"><img class="error-img" id="error-svg" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/bx_bxs-error.svg" data-pagespeed-url-hash="2925039386" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"><span class="error-span" id="errorSpanDropoff"> The drop-off postcode is
+                                    required</span></label></span>
+
+                    </div>
+                </div>
+
+                <div class="input-item-left col-md-12">
+                    <div class="wildcard-style col-md-12">
+                        <p class="input-field-label font-style-large">
+                            Email Address * <a class="information-anchor" onclick="informationClickEmail()" onmouseout="informationClickEmail()" onmouseover="informationClickEmail()"><img class="information-img" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/tooltip_desktop.svg" data-pagespeed-url-hash="180092857" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                            </a>
+                        </p>
+                        <div class="email-tooltip" id="emailTooltip" style="display: none;">
+                            <p class="tooltip-text">We will email you with a copy of your quotes.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="input-container col-md-12" id="inputContainerEmail" style="background: #EDEDED;border-radius:5px;"><img src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/email_icon.svg" style="background:transparent;" data-pagespeed-url-hash="326627523" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                        <input class="input-field-quote pick-location " id="input-email" type="text" oninput="autocapitaliseFieldPickup()" placeholder="e.g. name@mail.com" name="usrnm" style="background: #EDEDED;border: 0px;color:#223039;">
+                        <span class="postcode_pickup_error" style="color: red;"><label class="hidden" id="errorLabelEmail"><img class="error-img" id="error-svg" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/bx_bxs-error.svg" data-pagespeed-url-hash="2925039386" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"><span class="error-span"> Please enter your email address</span></label></span>
+                    </div>
+                </div>
+
+                <div class="input-item-right col-md-12">
+                    <div class="wildcard-style col-md-12">
+                        <p class="input-field-label font-style-large">
+                            Contact Number * <a class="information-anchor" onclick="informationClickContact()" onmouseout="informationClickContact()" onmouseover="informationClickContact()"><img class="information-img" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/tooltip_desktop.svg" data-pagespeed-url-hash="180092857" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                            </a>
+                        </p>
+                        <div class="email-tooltip left-5" id="contactTooltip" style="display: none;">
+                            <p class="tooltip-text">Just in case you need some assistance. </p>
+                        </div>
+
+                    </div>
+
+                    <div class="input-container col-md-12" id="inputContainerContact" style="background:#EDEDED; border-radius:5px;"><img src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/phone_icon.svg" style="background:transparent;" width="20%" height="auto" data-pagespeed-url-hash="2490045425" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                        <input class="input-field-quote delivery-location" id="input-contact" type="tel" oninput="autocapitaliseFieldDropoff()" minlength="11" maxlength="16" placeholder="e.g 07899989789" name="usrnm" style="background:transparent;border: 0px;color:#223039;">
+                        <span class="postcode_pickup_error" style="color: red;"><label class="hidden" id="errorLabelContact"><img class="error-img" id="error-svg" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/bx_bxs-error.svg" data-pagespeed-url-hash="2925039386" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"><span class="error-span" id="errorSpanContact"> Please enter your contact
+                                    number</span></label></span>
+                    </div>
+                </div>
+                <div class="input-item-left col-md-12 div-mini">
+                    <div>
+                        <label class="margin-align business-label font-style-large" style="color: #223039;">Are you a
+                            business?
+                            <div class="radio-input-div">
+                                <input class="radio-input" type="radio" id="radioYes" onclick="radioToggle()" name="fav_language" value="Yes" checked="checked">
+                                <label class="radio-label" for="Yes">Yes</label><br>
+                                <input class="radio-input" type="radio" id="no" onclick="radioToggle()" name="fav_language" value="no">
+                                <label class="radio-label" for="No">No</label><br>
+                            </div>
+                    </label></div>
+                </div>
+				<div class="input-item-right col-md-12 div-mini">
+                    <div id="companyNameDiv">
+                        <div class="wildcard-style col-md-12">
+                            <p class="input-field-label font-style-large" id="nameLabel">
+                                Company Name *
+                            </p>
+                        </div>
+                        <div class="input-container col-md-12" id="inputContainerName" style="background: #EDEDED;border-radius:5px;">
+                            <input class="input-field-quote pick-location " id="input-name" type="text" oninput="autocapitaliseFieldPickup()" placeholder="" name="usrnm" style="background: #EDEDED;border: 0px;color:#223039; padding:16px;">
+                            <span class="postcode_pickup_error" style="color: red;"><label class="hidden" id="errorLabelName"><img class="error-img" id="error-svg" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/bx_bxs-error.svg" data-pagespeed-url-hash="2925039386" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"><span id="nameSpanError" class="error-span"> Please enter your company
+                                        name</span></label></span>
+                        </div>
+                    </div>
+                </div>
+                <label class="required-field-label font-style-small">
+                    * indicates a required field
+                </label>
+                <div class="checkbox-div">
+                    <input class="margin-align checkbox-style" type="checkbox" id="checkboxInput" value="0" onclick="autoRemoveFormErrors()">
+                    <label class="tos-label-tos font-style" for="vehicle3" style="color: #223039;margin-left: 30px !important;
+                display: inherit !important;"> I've read and understood the <a class="tos-link" onclick="navigateToTermsAndService()">Terms &amp; Conditions</a> *<span class="required-span"></span></label>
+                    <span class="" style="color: red;"><label class="hidden" id="errorLabelCheckbox"><img class="error-img" id="error-svg" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/bx_bxs-error.svg" data-pagespeed-url-hash="2925039386" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"><span class="error-span" style="right: -5px; top: 3px;">Please confirm that you have read
+                                and understood the Terms &amp; Conditions</span></label></span>
+                </div>
+                <div class="col-md-6 tworw" style="margin-top: 20px;">
+                    <div class="jury">
+                        <div class="row">
+                            <div class="col-md-12" style="width:100%; padding-right: 0px;">
+                                <input class="btn rs" type="submit" onclick="submitQuote()" value="Get Vehicle Prices" style="border-style: solid; border-width: 2px; border-color: #ffffff; border-radius: 10px;margin-left:-5px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 tworw">
+                    <div class="jury">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="/*padding-bottom: 48px;*/" class="hidden" id="frameStepTwo">
+            <button class="back-button" onclick="navigateToDeliveryDetails()"><img src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/chevron-left-lg.svg" data-pagespeed-url-hash="1459207396" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></button>
+            <div class="header-div">
+                <label class="vehicle-page-title">Estimated Prices** </label>
+                <div class="toggle-div">
+                    <label class="switch">
+                        <input type="checkbox" style="right: -5px;" onclick="togglePriceDisplay()" id="priceToggle">
+                        <div class="slider round">
+                            <span class="on"></span>
+                            <span class="off"></span>
+                        </div>
+                    </label>
+                </div>
+                <label class="font-style toggle-label font-light">Excludes VAT</label>
+            </div>
+            <div class="vehicle-price-div" onclick="createAccount()">
+                <img class="vehicle-img" src="https://alpha-api.deliveryapp.com/images/vehicles/car.png" data-pagespeed-url-hash="1705721545" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                <label class="font-style-large vehicle-title vehicle-label">Car</label>
+                <label class="font-style-large vehicle-label vehicle-price-label" id="carLabel">£30.00</label>
+            </div>
+            <div class="vehicle-price-div" onclick="createAccount()">
+                <img class="vehicle-img" src="https://alpha-api.deliveryapp.com/images/vehicles/small-van.png" data-pagespeed-url-hash="2384635450" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                <label class="font-style-large vehicle-title vehicle-label">Small Van</label>
+                <label class="font-style-large vehicle-label vehicle-price-label" id="SVLabel">£30.00</label>
+            </div>
+            <div class="vehicle-price-div" onclick="createAccount()">
+                <img class="vehicle-img" src="https://alpha-api.deliveryapp.com/images/vehicles/medium-vehicle.png" data-pagespeed-url-hash="3541632973" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                <label class="font-style-large vehicle-title vehicle-label">Medium Van SWB</label>
+                <label class="font-style-large vehicle-label vehicle-price-label" id="MVLabel">£30.00</label>
+            </div>
+            <div class="vehicle-price-div" onclick="createAccount()">
+                <img class="vehicle-img" src="https://alpha-api.deliveryapp.com/images/vehicles/large-van.png" data-pagespeed-url-hash="1504711874" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                <label class="font-style-large vehicle-title vehicle-label">Large Van LWB</label>
+                <label class="font-style-large vehicle-label vehicle-price-label" id="LVLabel">£30.00</label>
+            </div>
+            <div class="vehicle-price-div" onclick="createAccount()">
+                <img class="vehicle-img" src="https://alpha-api.deliveryapp.com/images/vehicles/xlwb-van.png" data-pagespeed-url-hash="138789062" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                <label class="font-style-large vehicle-title vehicle-label">Extra Large Van</label>
+                <label class="font-style-large vehicle-label vehicle-price-label" id="XLVLabel">£30.00</label>
+            </div>
+            <div class="vehicle-price-div" onclick="createAccount()">
+                <img class="vehicle-img" src="https://alpha-api.deliveryapp.com/images/vehicles/luton.png" data-pagespeed-url-hash="3025298459" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                <label class="font-style-large vehicle-title vehicle-label">Luton Van</label>
+                <label class="font-style-large vehicle-label vehicle-price-label" id="LutonLabel">£30.00</label>
+            </div>
+            <label class="font-style-small full-width" style="margin: 10px 0px 0px 0px;">** VAT not applicable for
+                congestion charges</label>
+            <label class="font-style-small full-width" id="congestionHint" style="margin: 10px 0px 0px 0px;">* Includes applicable tolls and congestion charges</label>
+            <label id="accountCreationHint" class="font-style full-width" style="margin: 20px 0px 20px 0px;">Finish
+                creating your account to request your delivery today.</label>
+
+            <!-- <div id="createAccountDiv" class="col-md-6 tworw"> -->
+            <div id="createAccountDiv" class="create-account-btn">
+                <div class="jury">
+                    <div class="row">
+                        <div class="col-md-12" style="width:100%; padding-right: 0px; margin-left: 0px;">
+                            <input class="btn rs font-style-large" type="submit" onclick="createAccount()" value="Create Account" style="font-size: 18px; border-style: solid; border-width: 2px; border-color: #ffffff; border-radius: 10px;margin-left:-5px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="account-creation-div-hidden" id="accountCreationDiv" style="">
+                <div class="input-item-left col-md-12 input-item-mini input-div-mobile" style="margin-left: 0px !important; padding-bottom: 20px !important;">
+                    <div class="wildcard-style col-md-12" style="margin-left: 0px;">
+                        <p class="input-field-label no-padding label-mini font-style-large">
+                            Full Name *
+                        </p>
+                    </div>
+
+                    <div class="input-container col-md-12 btn-mini label-mini" id="inputContainerFirstName" style="background: #EDEDED;border-radius:5px; margin-left: 0px !important;"><img src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/location_symbol.svg" style="background:transparent; display: none;" data-pagespeed-url-hash="4121082883" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                        <input class="input-field-quote pick-location " id="inputFirstName" type="text" oninput="autocapitaliseFieldPickup()" placeholder="John" name="usrnm" style="background: #EDEDED;border: 0px;color:#223039; padding: 0px 0px 0px 10px;">
+                        <span class="postcode_pickup_error" style="color: red;"><label class="hidden" id="errorLabelFirstName"><img class="error-img" id="error-svg" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/bx_bxs-error.svg" data-pagespeed-url-hash="2925039386" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"><span class="error-span" id="errorSpanFirstName"> Please enter your full
+                                    name</span></label></span>
+                    </div>
+                </div>
+
+                <div class="input-item-right col-md-12 input-item-mini input-div-mobile" style="padding-right: 0px !important; padding-bottom: 20px !important;">
+                    <div class="wildcard-style col-md-12">
+                        <p class="input-field-label no-padding label-mini font-style-large">
+                            Password *
+                        </p>
+                    </div>
+
+                    <div class="input-container col-md-12 btn-mini label-mini" id="inputContainerPassword" style="background: #EDEDED;border-radius:5px; ">
+                        <input class="input-field-quote pick-location " oninput="autoRemovePasswordError()" id="passwordInput" type="password" placeholder="" autocomplete="off" name="usrnm" style="background: #EDEDED;border: 0px;color:#223039; padding: 0px 0px 0px 10px;">
+                        <img id="passwordImgShow" onclick="togglePasswordDisplay()" class="password-img" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/hide_eye_updated.svg" data-pagespeed-url-hash="2937714123" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                        <img id="passwordImgHide" onclick="togglePasswordDisplay()" class="hidden" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/show_pwd_icon.svg" data-pagespeed-url-hash="909133922" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                    </div>
+                    <label class="password-hint">Min 8 characters</label>
+                    <span class="postcode_pickup_error password-error" style="color: red; position: relative;top: 0px;left: 0px;"><label class="error-label" id="errorLabelPassword" style="display: none;"><img class="error-img" id="error-svg" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/bx_bxs-error.svg" data-pagespeed-url-hash="2925039386" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"><span style="margin-left: 15px;" class="error-span" id="passwordErrorSpan"> Password field
+                                is required</span></label></span>
+                </div>
+
+                <div style="float: left !important; padding: 0px 0px 0px 16px ; margin-top: 30px; margin-left: 0px;" class="input-item-left col-md-12 input-item-mini">
+
+                    <div class="wildcard-style col-md-12">
+                        <p style="color: transparent !important;" class="input-field-label no-padding input-field-mobile">
+                            .
+                        </p>
+                    </div>
+
+                    <div class="input-container col-md-12 btn-mini label-mini" id="inputContainerPickup" style="background: #EDEDED;border-radius:10px; padding: 0px;">
+                        <input class="input-field-quote pick-location btn-mini" id="input-pickup" type="button" onclick="registerAccount()" value="Submit" name="usrnm" style="background: #223039;border: 1px solid white;color:#fff; font-size: 18px;font-weight: 600;">
+                        <span class="postcode_pickup_error" style="color: red;"><label class="hidden" id="errorLabelPickup"><img class="error-img" id="error-svg" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/bx_bxs-error.svg" data-pagespeed-url-hash="2925039386" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"><span class="error-span"> The pick-up postcode is required</span></label></span>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="quote-again-div">
+            <script>
+//declare html elements
+const registrationPagePopup = document.getElementById("registrationPagePopup");
+const quickQuotePopup = document.getElementById("quickQuotePopup");
+const framebody = document.getElementById("framebody");
+const radioYes = document.getElementById("radioYes");
+const nameLabel = document.getElementById("nameLabel");
+const passwordImgShow = document.getElementById("passwordImgShow");
+const passwordImgHide = document.getElementById("passwordImgHide");
+const passwordInput = document.getElementById("passwordInput");
+const createAccountDiv = document.getElementById("createAccountDiv");
+const accountCreationDiv = document.getElementById("accountCreationDiv");
+const errorLabelPassword = document.getElementById("errorLabelPassword");
+const emailTooltip = document.getElementById("emailTooltip");
+const contactTooltip = document.getElementById("contactTooltip");
+const priceToggle = document.getElementById("priceToggle");
+const inputContainerPassword = document.getElementById("inputContainerPassword");
+const passwordErrorSpan = document.getElementById("passwordErrorSpan");
+const nameSpanError = document.getElementById("nameSpanError");
+const accountCreationHint = document.getElementById("accountCreationHint");
+const companyNameDiv = document.getElementById("companyNameDiv");
+const inputFirstName = document.getElementById("inputFirstName");
+const inputSurname = document.getElementById("inputSurname");
+const errorLabelFirstName = document.getElementById("errorLabelFirstName");
+const inputContainerFirstName = document.getElementById("inputContainerFirstName");
+const errorLabelSurname = document.getElementById("errorLabelSurname");
+const inputContainerSurname = document.getElementById("inputContainerSurname");
+const inputDropoff = document.getElementById("input-dropoff");
+const inputPickup = document.getElementById("input-pickup");
+const buttonCallback = document.getElementById("button-callback");
+const buttonBook = document.getElementById("button-book");
+const priceSpan = document.getElementById("priceSpan");
+const priceDisplay = document.getElementById("priceDisplay");
+const errorSvg = document.getElementById("error-svg");
+const firstName = document.getElementById("firstName");
+const lastName = document.getElementById("lastName");
+const contactNumber = document.getElementById("contactNumber");
+const emailAddress = document.getElementById("emailAddress");
+const password = document.getElementById("password");
+const passwordConfirm = document.getElementById("passwordConfirm");
+const checkboxInput = document.getElementById("checkboxInput");
+const registrationPage = document.getElementById("registrationPage");
+const registrationConfirmation = document.getElementById("registrationConfirmation");
+const passwordImg = document.getElementById("passwordImg");
+const passwordConfirmImg = document.getElementById("passwordConfirmImg");
+const errorLabel = document.getElementById("errorLabel");
+const errorFirstName = document.getElementById("errorFirstName");
+const errorLastName = document.getElementById("errorLastName");
+const errorContactNumber = document.getElementById("errorContactNumber");
+const errorEmailAddress = document.getElementById("errorEmailAddress");
+const errorPassword = document.getElementById("errorPassword");
+const errorPasswordConfirm = document.getElementById("errorPasswordConfirm");
+const popup = document.getElementById("popup");
+const contactNumberDiv = document.getElementById("contactNumberDiv");
+const additionalError = document.getElementById("additionalError");
+const errorCheckbox = document.getElementById("errorCheckbox");
+const inputContainerPickup = document.getElementById("inputContainerPickup");
+const inputContainerDropoff = document.getElementById("inputContainerDropoff");
+const inputContainerEmail = document.getElementById("inputContainerEmail");
+const inputContainerContact = document.getElementById("inputContainerContact");
+const inputContainerName = document.getElementById("inputContainerName");
+const inputEmail = document.getElementById("input-email");
+const inputContact = document.getElementById("input-contact");
+const inputName = document.getElementById("input-name");
+const errorLabelPickup = document.getElementById("errorLabelPickup");
+const errorLabelDropoff = document.getElementById("errorLabelDropoff");
+const errorLabelEmail = document.getElementById("errorLabelEmail");
+const errorLabelContact = document.getElementById("errorLabelContact");
+const errorLabelName = document.getElementById("errorLabelName");
+const errorLabelCheckbox = document.getElementById("errorLabelCheckbox");
+const errorSpanContact = document.getElementById("errorSpanContact");
+const errorSpanPickup = document.getElementById("errorSpanPickup");
+const errorSpanDropoff = document.getElementById("errorSpanDropoff");
+const frameStepOne = document.getElementById("frameStepOne");
+const frameStepTwo = document.getElementById("frameStepTwo");
+const trackerItemOne = document.getElementById("trackerItemOne");
+const trackerItemTwo = document.getElementById("trackerItemTwo");
+//const trackerItemThree = document.getElementById("trackerItemThree");
+const trackerLabelOne = document.getElementById("trackerLabelOne");
+const trackerLabelTwo = document.getElementById("trackerLabelTwo");
+
+const carLabel = document.getElementById("carLabel");
+const SVLabel = document.getElementById("SVLabel");
+const MVLabel = document.getElementById("MVLabel");
+const LVLabel = document.getElementById("LVLabel");
+const XLVLabel = document.getElementById("XLVLabel");
+const LutonLabel = document.getElementById("LutonLabel");
+const congestionHint = document.getElementById("congestionHint");
+
+
+const xhr = new XMLHttpRequest();
+
+var autoUpdatePrice = false;
+var errorMessage = "";
+var errorMessageEmail = "";
+var errorMessagePassword = "";
+var errorMessageNumber = "";
+
+let errorCount = 0;
+let canSendRequest = false;
+let vehiclePrices = "";
+let stepTwoActive = false;
+let informationHover = false;
+let informationHoverContact = false;
+let passwordHidden = true;
+let containsCongestion = false;
+
+function togglePriceDisplay() {
+    if (priceToggle.checked) {
+        carLabel.innerHTML = "£" + vehiclePrices.items[0].price_vat;
+        SVLabel.innerHTML = "£" + vehiclePrices.items[1].price_vat;
+        MVLabel.innerHTML = "£" + vehiclePrices.items[2].price_vat;
+        LVLabel.innerHTML = "£" + vehiclePrices.items[3].price_vat;
+        XLVLabel.innerHTML = "£" + vehiclePrices.items[4].price_vat;
+        LutonLabel.innerHTML = "£" + vehiclePrices.items[5].price_vat;
+    }
+    else {
+        carLabel.innerHTML = "£" + vehiclePrices.items[0].price_without_vat_with_toll;
+        SVLabel.innerHTML = "£" + vehiclePrices.items[1].price_without_vat_with_toll;
+        MVLabel.innerHTML = "£" + vehiclePrices.items[2].price_without_vat_with_toll;
+        LVLabel.innerHTML = "£" + vehiclePrices.items[3].price_without_vat_with_toll;
+        XLVLabel.innerHTML = "£" + vehiclePrices.items[4].price_without_vat_with_toll;
+        LutonLabel.innerHTML = "£" + vehiclePrices.items[5].price_without_vat_with_toll;
+    }
+    if(containsCongestion){
+        carLabel.innerHTML += "*";
+        SVLabel.innerHTML += "*";
+        MVLabel.innerHTML += "*";
+        LVLabel.innerHTML += "*";
+        XLVLabel.innerHTML += "*";
+        LutonLabel.innerHTML += "*";
+        congestionHint.className = "font-style-small";
+    }
+    else{
+        congestionHint.className = "hidden";
+    }
+
+}
+
+
+function autoRemovePasswordError() {
+    if (passwordInput.value.length >= 8) {
+        errorLabelPassword.style = "display: none;";
+        inputContainerPassword.style = "background: #EDEDED;border-radius:5px; ";
+    }
+}
+
+function registerAccountErrors() {
+    //if (inputSurname.value == "") {
+        //errorLabelSurname.className = "";
+        //inputContainerSurname.className += " input-error";
+    //}
+    //else {
+        //inputContainerSurname.className = "input-container col-md-12";
+        //errorLabelSurname.className = "hidden";
+    //}
+    if (inputFirstName.value == "") {
+        errorLabelFirstName.className = "";
+        inputContainerFirstName.className += " input-error";
+    }
+    else {
+        inputContainerFirstName.className = "input-container col-md-12";
+        errorLabelFirstName.className = "hidden";
+    }
+}
+
+function registerAccount() {
+    registerAccountErrors();
+
+    errorLabelPassword.style = "display: none;";
+    inputContainerPassword.style = "background: #EDEDED;border-radius:5px; ";
+
+    if (passwordInput.value.length < 8) {
+        errorLabelPassword.style = "";
+        inputContainerPassword.style = "background: #EDEDED;border-radius:5px; border: 2px solid red;";
+    }
+
+    if (passwordInput.value.length >= 8) {
+        xhr.open("POST", "https://alpha-api.deliveryapp.com/api/user/register", true);
+        xhr.setRequestHeader('Content-type', 'application/json');
+        xhr.setRequestHeader('Accept', 'application/json');
+
+        xhr.onload = function () {
+            if (this.status === 200) {
+                switchView();
+            } else if (this.status === 422) {
+                let errorMsg = JSON.parse(this.responseText);
+
+                errorLabelPassword.style = "";
+                passwordErrorSpan.innerHTML = errorMsg.message;
+
+                $.each(errorMsg.errors, function( index, value ) {
+                    passwordErrorSpan.innerHTML =  value ;
+                });
+            } else if (this.status === 206 || this.status === 302) {
+                errorLabelPassword.style = "";
+                passwordErrorSpan.innerHTML = "You have already registered an account!";
+            } else {
+                errorLabelPassword.style = "";
+                passwordErrorSpan.innerHTML = "Error, please try again.";
+            }
+        }
+        let phoneNo = inputContact.value;
+        if (inputContact.value[0] == "0") {
+            phoneNo = phoneNo.substring(1);
+        }
+        let data = {
+            "email": inputEmail.value,
+            "password": passwordInput.value,
+            "role": "customer", // WE NEED ADD GUEST FOR REGISTER VALIDATION
+            "terms": 1,
+            "details" : {
+                "full_name": inputFirstName.value,
+                "contact_number": phoneNo,
+                "is_business": false
+            }
+        }
+
+        xhr.send(JSON.stringify(data));
+    }
+
+    console.log("s");
+    return;
+}
+
+function togglePasswordDisplay() {
+    if (passwordHidden) {
+        passwordImgShow.className = "hidden";
+        passwordImgHide.className = "password-img";
+        passwordInput.type = "";
+    }
+    else {
+        passwordImgHide.className = "hidden";
+        passwordImgShow.className = "password-img";
+        passwordInput.type = "password";
+    }
+    passwordHidden = !passwordHidden;
+}
+
+function createAccount() {
+    if (stepTwoActive) {
+        navigateToVehiclePrices();
+        createAccountDiv.style = "display: none;";
+        accountCreationDiv.className = "account-creation-div";
+        frameStepTwo.style = "";
+        accountCreationHint.innerHTML = "Set a password to create your account and request your delivery today.";
+    }
+}
+
+function radioToggle() {
+    if (radioYes.checked) {
+        companyNameDiv.style = "";
+        nameLabel.innerHTML = "Company Name *";
+        nameSpanError.innerHTML = " Please enter your company name";
+        priceToggle.checked = false;
+    }
+    else {
+        companyNameDiv.style = "display: none;";
+        nameLabel.innerHTML = "Full Name *";
+        nameSpanError.innerHTML = " Please enter your full name";
+        priceToggle.checked = true;
+    }
+}
+
+function informationClickEmail() {
+    informationHover = !informationHover;
+    if (!informationHover) {
+        emailTooltip.style = "display: none;";
+    }
+    else {
+        emailTooltip.style = "";
+    }
+}
+
+function informationClickContact() {
+    informationHoverContact = !informationHoverContact;
+    if (!informationHoverContact) {
+        contactTooltip.style = "display: none;";
+    }
+    else {
+        contactTooltip.style = "";
+    }
+}
+
+
+function registrationPopUp() {
+    if (window.innerWidth < 500) {
+        //window.parent.scrollTo(0, 300);
+    }
+    registrationPagePopup.className = "body";
+    quickQuotePopup.className = "hidden";
+    framebody.className = "fullwidth-registration";
+}
+
+function quotePage() {
+    registrationPagePopup.className = "hidden";
+    quickQuotePopup.className = "";
+    framebody.className = "fullwidth";
+    registrationPage.className = "body";
+    registrationConfirmation.className = "hidden";
+}
+
+function navigateToRegistration() {
+    registrationPage.className = "body";
+    registrationConfirmation.className = "hidden";
+}
+
+function detectMob() {
+    return ((window.innerWidth <= 600) && (window.innerHeight <= 600));
+}
+
+function callNumber() {
+    if (window.innerWidth < 500) {
+        window.top.location.href = "tel:03450660100";
+    }
+}
+
+function switchView() {
+    window.top.location.href = "https://www.deliveryapp.com/thank-you-for-registering/";
+
+}
+
+function autocapitaliseFieldPickup() {
+    autoRemoveFormErrors();
+    var inputPickup = document.getElementById("input-pickup");
+    //new google.maps.places.Autocomplete(inputPickup);
+    if (inputPickup.value != null && inputPickup.value != "") {
+        inputPickup.className = "input-field-upper pickup-location";
+    }
+    else if (inputPickup.value == "") {
+        inputPickup.className = "input-field-quote pickup-location";
+    }
+}
+
+function isNumber(str) {
+    var pattern = /^\d+$/;
+    return pattern.test(str);  // returns a boolean
+}
+
+
+function HighlightTrackerThree() {
+    trackerItemOne.className = "tracker-item-one";
+    trackerLabelOne.className = "tracker-label";
+    trackerItemTwo.className = "tracker-item-one";
+    trackerLabelTwo.className = "tracker-label";
+    //trackerItemThree.className = "tracker-item-one tracker-item-active";
+}
+
+function navigateToVehiclePrices() {
+    togglePriceDisplay();
+    frameStepOne.className = "hidden";
+    frameStepTwo.className = "";
+    trackerItemOne.className = "tracker-item-one";
+    trackerLabelOne.className = "tracker-label";
+    trackerItemTwo.className = "tracker-item-one tracker-item-active";
+    trackerLabelTwo.className = "tracker-label tracker-label-active";
+    stepTwoActive = true;
+    if (window.innerWidth < 500) {
+        //window.parent.scrollTo(0, 830);
+    }
+    else {
+        //window.parent.scrollTo(0, 100);
+    }
+}
+
+// go back
+function navigateToDeliveryDetails() {
+    frameStepOne.className = "";
+    frameStepTwo.className = "hidden";
+    trackerItemTwo.className = "tracker-item-one";
+    trackerLabelTwo.className = "tracker-label";
+    trackerItemOne.className = "tracker-item-one tracker-item-active";
+    trackerLabelOne.className = "tracker-label tracker-label-active";
+    //trackerItemThree.className = "tracker-item-one";
+    errorLabelPassword.style = "display: none;";
+    inputContainerPassword.style = "background: #EDEDED;border-radius:5px; ";
+    passwordErrorSpan.innerHTML = "Please make sure all the details are correct";
+}
+
+function autocapitaliseFieldDropoff() {
+    autoRemoveFormErrors();
+    var inputDropoff = document.getElementById("input-dropoff");
+    //new google.maps.places.Autocomplete(inputDropoff);
+
+    if (inputDropoff.value != null && inputDropoff.value != "") {
+        inputDropoff.className = "input-field-upper delivery-location";
+        $('.postcode_delivery_error').html('');
+    }
+    else if (inputDropoff.value == "") {
+        inputDropoff.className = "input-field-quote delivery-location";
+    }
+}
+
+function myFunction(value) {
+    $('.vehicle_id_error').html('');
+    id = value;
+    $('.remove-active').removeClass('active');
+    $('.account-heading' + id).addClass('active');
+    if (inputPickup.value != "" && inputDropoff.value != "" && autoUpdatePrice) {
+        this.submitQuote();
+    }
+
+    if (this.detailObj != undefined && autoUpdatePrice) {
+        this.submitQuote();
+    }
+
+    // Instantiate an new XHR Object
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET","https://alpha-api.deliveryapp.com/api/v1/vehicles/" + id, true);
+    xhr.onload = function () {
+        if (this.status === 200) {
+            detailObj = JSON.parse(this.responseText);
+        }
+        else {
+            console.log("File not found");
+        }
+    }
+    xhr.send();
+}
+
+function autoRemoveQuoteErrors() {
+    if (inputPickup.value == "") {
+        inputContainerPickup.className += " input-error";
+        errorLabelPickup.className = "";
+    }
+    if (inputDropoff.value == "") {
+        inputContainerDropoff.className += " input-error";
+        errorLabelDropoff.className = "";
+    }
+    if (inputEmail.value == "") {
+        inputContainerEmail.className += " input-error";
+        errorLabelEmail.className = "";
+
+    }
+    if (inputContact.value == "") {
+        inputContainerContact.className += " input-error";
+        errorLabelContact.className = "";
+
+    }
+    if (inputName.value == "") {
+        inputContainerName.className += " input-error";
+        errorLabelName.className = "";
+
+    }
+}
+
+function autoRemoveFormErrors() {
+    if (inputFirstName.value != "") {
+        inputContainerFirstName.className = "input-container col-md-12";
+        errorLabelFirstName.className = "hidden";
+    }
+    //    if (inputPickup.value != "") {
+    //  inputContainerPickup.className = "input-container col-md-12";
+    //    errorLabelPickup.className = "hidden";
+    //}
+    if (inputDropoff.value != "") {
+        inputContainerDropoff.className = "input-container col-md-12";
+        errorLabelDropoff.className = "hidden";
+    }
+    if (inputEmail.value != "" && inputEmail.value.includes('@') && inputEmail.value.includes('.')) {
+        inputContainerEmail.className = "input-container col-md-12";
+        errorLabelEmail.className = "hidden";
+    }
+    if (inputContact.value != "" && inputContact.value.length >= 10 && isNumber(inputContact.value)) {
+        inputContainerContact.className = "input-container col-md-12";
+        errorLabelContact.className = "hidden";
+    }
+    if (inputName.value != "") {
+        inputContainerName.className = "input-container col-md-12";
+        errorLabelName.className = "hidden";
+    }
+    if (checkboxInput.checked == true) {
+        errorLabelCheckbox.className = "hidden";
+        checkboxInput.style = "";
+    }
+}
+
+function formErrors() {
+    if (inputPickup.value == "") {
+        inputContainerPickup.className += " input-error";
+        errorLabelPickup.className = "";
+        errorSpanPickup.innerHTML = " The pick-up postcode is required";
+    }
+    else {
+        inputContainerPickup.className = "input-container col-md-12";
+        errorLabelPickup.className = "hidden";
+    }
+    if (inputDropoff.value == "") {
+        inputContainerDropoff.className += " input-error";
+        errorLabelDropoff.className = "";
+        errorSpanDropoff.innerHTML = " The drop-off postcode is required";
+    }
+    else {
+        inputContainerDropoff.className = "input-container col-md-12";
+        errorLabelDropoff.className = "hidden";
+    }
+    if (inputEmail.value == "") {
+        inputContainerEmail.className += " input-error";
+        errorLabelEmail.className = "";
+    }
+    else if (!inputEmail.value.includes('@') || !inputEmail.value.includes('.')) {
+        inputContainerEmail.className += " input-error";
+        errorLabelEmail.className = "";
+    }
+    else {
+        inputContainerEmail.className = "input-container col-md-12";
+        errorLabelEmail.className = "hidden";
+    }
+    if (inputContact.value == "") {
+        inputContainerContact.className += " input-error";
+        errorLabelContact.className = "";
+
+    }
+    else if (inputContact.value.length < 10 && isNumber(inputContact.value)) {
+        console.log(inputContact.value.length);
+        inputContainerContact.className += " input-error";
+        errorLabelContact.className = "";
+        errorSpanContact.innerHTML = "Invalid mobile format";
+    }
+    else {
+        inputContainerContact.className = "input-container col-md-12";
+        errorLabelContact.className = "hidden";
+    }
+    if (inputName.value == "") {
+        inputContainerName.className += " input-error";
+        errorLabelName.className = "";
+    }
+    else {
+        inputContainerName.className = "input-container col-md-12";
+        errorLabelName.className = "hidden";
+    }
+    if (checkboxInput.checked == false) {
+        errorLabelCheckbox.className = "visible";
+        checkboxInput.style = "border: 1px solid red;";
+    }
+    else {
+        errorLabelCheckbox.className = "hidden";
+        checkboxInput.style = "";
+    }
+}
+
+function invalidPostcodeError() {
+    if (inputEmail.value.includes('@') && inputEmail.value.includes('.')) {
+        errorSpanDropoff.innerHTML = " Please double check postcode";
+        errorSpanPickup.innerHTML = " Please double check postcode";
+        inputContainerPickup.className += " input-error";
+        errorLabelPickup.className = "";
+        inputContainerDropoff.className += " input-error";
+        errorLabelDropoff.className = "";
+    }
+}
+
+function submitQuote() {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        'event': 'getAQuote'
+    });
+
+    formErrors();
+    if (checkboxInput.checked && isNumber(inputContact.value) && inputContact.value.length >= 10) {
+        let params = {
+            postcode_delivery: inputDropoff.value,
+            postcode_pickup: inputPickup.value,
+            name: inputName.value,
+            email: inputEmail.value,
+            phone: inputContact.value,
+            url: 'http://www.deliveryapp.com/quote/'
+        }
+        if (!radioYes.checked) {
+            params.name = "NotProvided";
+        }
+
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://alpha-api.deliveryapp.com/api/wordpress/quote", true);
+        xhr.setRequestHeader('Content-type', 'application/json');
+		
+        xhr.onload = function () {
+            containsCongestion = false;
+            try {
+                data = JSON.parse(this.responseText);
+                console.log(data);
+            }
+            catch {
+                console.log("error");
+            }
+            if (this.status == 200) {
+                if (inputEmail.value.includes('@') && inputEmail.value.includes('.')) {
+                    vehiclePrices = data;
+                    let congestionPrice = parseInt(vehiclePrices.items[0].congestion);
+                    if(congestionPrice > 0){
+                        console.log('Contains congestion');
+                        containsCongestion = true;
+                        navigateToVehiclePrices();
+                        autoUpdatePrice = true;
+                    }
+                    else{
+                        navigateToVehiclePrices();
+                    }
+                }
+            }
+            else if (this.status === 500) {
+                invalidPostcodeError();
+            }
+            else if (this.status === 422) {
+                console.log("422 error");
+            }
+        }
+        xhr.send(JSON.stringify(params));
+    }
+}
+
+function resetButton() {
+    $('.pick-location').val('');
+    $('.delivery-location').val('');
+    $('.remove-active').removeClass('active');
+    $('.per-mile-price').html("£" + "0.00");
+    autoUpdatePrice = false;
+    inputPickup.value = "";
+    inputDropoff.value = "";
+    myFunction(null);
+    autocapitaliseFieldDropoff();
+    autocapitaliseFieldPickup();
+    buttonBook.className = "hidden";
+    buttonCallback.className = "hidden";
+}
+
+function acceptTerms() {
+    inputContainerPickup.className += " input-error";
+    inputContainerDropoff.className += " input-error";
+    inputContainerEmail.className += " input-error";
+    inputContainerContact.className += " input-error";
+    inputContainerName.className += " input-error";
+    errorLabel.className = "";
+}
+
+function navigateToTermsAndService() {
+    window.open("https://www.deliveryapp.com/terms-conditions/");
+}
+
+function navigateToIosStore() {
+    window.top.location.href = "https://apps.apple.com/gb/app/deliverehub/id1309637944";
+}
+
+function navigateToPlayStore() {
+    window.top.location.href = "https://play.google.com/store/apps/details?id=com.deliverehub.app&hl=en_GB&gl=US";
+}
+
+function navigateToLogin() {
+    window.top.location.href = "https://portal.deliveryapp.com/";
+}
+
+function togglePasswordView() {
+    if (password.type == "password") {
+        password.type = "";
+        passwordImg.src = "https://unpkg.com/ionicons@5.5.1/dist/svg/eye-outline.svg";
+    }
+    else {
+        password.type = "password";
+        passwordImg.src = "https://unpkg.com/ionicons@5.5.1/dist/svg/eye-off-outline.svg";
+    }
+}
+
+function togglePasswordConfirmView() {
+    if (passwordConfirm.type == "password") {
+        passwordConfirm.type = "";
+        passwordConfirmImg.src = "https://unpkg.com/ionicons@5.5.1/dist/svg/eye-outline.svg";
+    }
+    else {
+        passwordConfirm.type = "password";
+        passwordConfirmImg.src = "https://unpkg.com/ionicons@5.5.1/dist/svg/eye-off-outline.svg";
+    }
+}
+
+function submitRegistration() {
+    if (contactNumber.value.length >= 10 && password.value.length >= 8 && checkboxInput.checked && firstName.value != "" && lastName.value != "" && emailAddress.value != "" && contactNumber.value != "" && password.value != "" && passwordConfirm.value != "" && password.value == passwordConfirm.value && emailAddress.value.includes('@')) {
+        const xhr = new XMLHttpRequest();
+        errorMessage = "";
+        errorMessageEmail = "";
+        errorMessageNumber = "";
+        errorMessagePassword = "";
+        displayErrors();
+        let number = "+44" + contactNumber.value;
+        let data = {
+            "name": firstName.value,
+            "surname": lastName.value,
+            "mobile_number": number,
+            "email": emailAddress.value,
+            "password": password.value,
+            "password_confirmation": passwordConfirm.value,
+            "terms": 1
+        }
+        xhr.open("POST","https://alpha-api.deliveryapp.com/api/user/register", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onload = function () {
+            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                errorMessage = "";
+                errorMessageEmail = "";
+                errorMessageNumber = "";
+                errorMessagePassword = "";
+                switchView();
+            }
+            else {
+                let object = JSON.parse(this.responseText);
+                errorMessage = "";
+                errorMessageEmail = "";
+                errorMessageNumber = "";
+                errorMessagePassword = "";
+                for (key in object) {
+                    if (object[key][0] != undefined) {
+                        if (object[key][0].includes("email")) {
+                            if (object[key][0] != "The email has already been taken.") {
+                                errorMessageEmail = object[key][0];
+                            }
+                            errorMessageEmail = "Email already in use";
+                        }
+                        if (object[key][0].includes("number")) {
+                            if (object[key][0] != "The mobile number format is invalid.") {
+                                errorMessageNumber = object[key][0];
+                            }
+                            errorMessageNumber = "Invalid number format";
+                        }
+                        if (object[key][0].includes("password")) {
+                            errorMessagePassword = object[key][0];
+                        }
+                    }
+                }
+                displayErrors();
+            }
+        }
+        xhr.send(JSON.stringify(data));
+    }
+    else {
+        displayErrors();
+    }
+}
+
+function autoRemoveErrors() {
+    if (firstName.value == "") {
+    }
+    else {
+        errorFirstName.className = "hidden-text";
+        firstName.className = "input-field";
+    }
+    if (lastName.value == "") {
+    }
+    else {
+        errorLastName.className = "hidden-text";
+        lastName.className = "input-field";
+    }
+    if (contactNumber.value == "") {
+    }
+    else {
+        errorContactNumber.className = "hidden-text";
+        contactNumber.className = "input-field";
+    }
+    if (emailAddress.value == "") {
+    }
+    else if (!emailAddress.value.includes('@') || emailAddress.value.includes(' ')) {
+    }
+    else {
+        errorEmailAddress.className = "hidden-text";
+        emailAddress.className = "input-field";
+    }
+    if (password.value == "") {
+    }
+    else {
+        errorPassword.className = "hidden-text";
+        password.className = "input-field";
+    }
+    if (passwordConfirm.value == "") {
+    }
+    else {
+        passwordConfirm.className = "input-field";
+        errorPasswordConfirm.className = "hidden-text";
+    }
+    if (password.value != passwordConfirm.value) {
+    }
+    else {
+        errorPasswordConfirm.className = "hidden-text";
+        passwordConfirm.className = "input-field";
+    }
+    if (!checkboxInput.checked) {
+    }
+    else {
+        errorCheckbox.className = "hidden-text";
+    }
+}
+
+
+function displayErrors() {
+    if (firstName.value == "") {
+        errorFirstName.className = "error-label";
+        firstName.className = "input-field-error";
+    }
+    else {
+        errorFirstName.className = "hidden-text";
+        firstName.className = "input-field";
+    }
+    if (lastName.value == "") {
+        errorLastName.className = "error-label";
+        lastName.className = "input-field-error";
+    }
+    else {
+        errorLastName.className = "hidden-text";
+        lastName.className = "input-field";
+    }
+    if (contactNumber.value == "") {
+        errorContactNumber.className = "error-label";
+        contactNumber.className = "input-field-error";
+        errorContactNumber.innerHTML = "Contact number required";
+    }
+    else if (contactNumber.value.length < 10) {
+        errorContactNumber.className = "error-label";
+        contactNumber.className = "input-field-error";
+        errorContactNumber.innerHTML = "Invalid number format";
+    }
+    else if (errorMessageNumber != "") {
+        errorContactNumber.className = "error-label";
+        contactNumber.className = "input-field-error";
+        errorContactNumber.innerHTML = errorMessageNumber;
+    }
+    else {
+        errorContactNumber.className = "hidden-text";
+        contactNumber.className = "input-field";
+    }
+    if (emailAddress.value == "") {
+        errorEmailAddress.className = "error-label";
+        errorEmailAddress.innerHTML = "Email address required";
+        emailAddress.className = "input-field-error";
+    }
+    else if (!emailAddress.value.includes('@') || emailAddress.value.includes(' ')) {
+        errorEmailAddress.className = "error-label";
+        errorEmailAddress.innerHTML = "Invalid email format";
+        emailAddress.className = "input-field-error";
+    }
+    else if (errorMessageEmail != "") {
+        errorEmailAddress.className = "error-label";
+        errorEmailAddress.innerHTML = errorMessageEmail;
+        emailAddress.className = "input-field-error";
+    }
+    else {
+        errorEmailAddress.className = "hidden-text";
+        emailAddress.className = "input-field";
+    }
+    if (password.value == "") {
+        errorPassword.className = "error-label";
+        password.className = "input-field-error";
+        errorPassword.innerHTML = "Please confirm your password";
+    }
+    else if (password.value.length < 8) {
+        errorPassword.className = "error-label";
+        password.className = "input-field-error";
+        errorPassword.innerHTML = "Minimum 8 characters required";
+    }
+    else {
+        errorPassword.className = "hidden-text";
+        password.className = "input-field";
+        // 
+    }
+    if (passwordConfirm.value == "") {
+        passwordConfirm.className = "input-field-error";
+        errorPasswordConfirm.className = "error-label";
+        errorPasswordConfirm.textContent = "Please confirm your password";
+    }
+    else {
+        passwordConfirm.className = "input-field";
+        errorPasswordConfirm.className = "hidden-text";
+    }
+    if (password.value != passwordConfirm.value) {
+        errorPasswordConfirm.className = "error-label";
+        errorPasswordConfirm.textContent = "Passwords do not match";
+        passwordConfirm.className = "input-field-error";
+    }
+    else {
+        errorPasswordConfirm.className = "hidden-text";
+        passwordConfirm.className = "input-field";
+    }
+    if (!checkboxInput.checked) {
+        errorCheckbox.className = "error-label";
+    }
+    else {
+        errorCheckbox.className = "hidden-text";
+    }
+}
+
+</script>
+                <a class="quote-again-anchor" onclick="navigateToDeliveryDetails()"><img style="padding-right: 5px; width:24px;" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/chevron-left-lg.svg" data-pagespeed-url-hash="1459207396" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">Get another
+                    quote</a>
+ <!-- end detail api fetcg -->
+ <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+</script>-->
+<div class="pb-lg-4 mb-5">
+          <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQPklmkB_SF3Sx00TNRzs21qrmR9DT2_s&amp;sensor=false&amp;libraries=places" type="text/javascript"></script>
+
+
+<link rel="stylesheet" href="https://www.deliveryapp.com/wp-content/themes/deliveryapp/css/quick-quote.css" type="text/css">
+
+
+<div id="framebody" class="fullwidth quick-quote-form">
+    <div style="padding-bottom: 20px;" class="hidden" id="registrationPagePopup">
+        <div id="registrationPage">
+            <div style="min-height: 57px; margin-top: 15px;">
+                <header style="float: left; margin-top: 20px;" class="header-style">Register</header>
+                <button onclick="quotePage()" style="float: right;
+                background: transparent;
+                border-radius: 5px;
+                outline: none;
+                border: 0px solid transparent;
+                color: white;
+                padding: 0px;">
+
+                    <img style="height:25px; width: 25px;" src="https://unpkg.com/ionicons@5.5.1/dist/svg/close-circle-outline.svg" data-pagespeed-url-hash="3369767790" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                </button>
+            </div>
+
+
+            <div>
+                <label class="label-style">Create an account. It's free and only takes a minute.</label>
+            </div>
+            <div>
+                <div style="width: 50%;float:left;padding: 0px 5px 0px 0px;">
+                    <div class="input-label-div">
+                        <label class="input-label">First Name <span class="required-span">*</span></label>
+                    </div>
+                    <div>
+                        <input class="input-field" oninput="autoRemoveErrors()" id="firstName">
+                    </div>
+                    <label id="errorFirstName" class="hidden-text">First name is required</label>
+                </div>
+
+
+                <div style="width: 50%; float:right;padding: 0px 0px 0px 5px;">
+                    <div class="input-label-div">
+                        <label class="input-label">Last Name <span class="required-span">*</span></label>
+                    </div>
+
+                    <div>
+                        <input class="input-field" oninput="autoRemoveErrors()" id="lastName">
+                    </div>
+                    <label id="errorLastName" class="hidden-text">Last name is required</label>
+                </div>
+
+            </div>
+
+            <div>
+                <div style="width: 50%;float:left;padding: 0px 5px 0px 0px;">
+                    <div class="input-label-div">
+                        <label class="input-label">Contact Number <span class="required-span">*</span></label>
+                    </div>
+                    <div id="contactNumberDiv" class="contact-number-div">
+                        <label>+44</label>
+                        <input class="input-field" oninput="autoRemoveErrors()" id="contactNumber" type="tel" maxlength="11">
+                    </div>
+                    <label id="errorContactNumber" class="hidden-text">Contact number required</label>
+                </div>
+
+
+                <div style="width: 50%; float:right;padding: 0px 0px 0px 5px;">
+                    <div class="input-label-div">
+                        <label class="input-label">Email Address <span class="required-span">*</span></label>
+                    </div>
+                    <div>
+                        <input class="input-field" oninput="autoRemoveErrors()" id="emailAddress">
+                    </div>
+                    <label id="errorEmailAddress" class="hidden-text">Email address required</label>
+                </div>
+
+            </div>
+
+            <div style="display: inline;">
+                <div style="width: 50%; float:left;padding: 0px 5px 0px 0px;">
+                    <div class="input-label-div">
+                        <label class="input-label">Password <span class="required-span">*</span></label>
+                        <label class="password-hint">Min 8 characters</label>
+                    </div>
+                    <div class="lol">
+                        <input class="input-field" oninput="autoRemoveErrors()" type="password" id="password">
+                        <img id="passwordImg" onclick="togglePasswordView()" src="https://unpkg.com/ionicons@5.5.1/dist/svg/eye-off-outline.svg" data-pagespeed-url-hash="811706064" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                    </div>
+
+                    <label id="errorPassword" style="position: relative;" class="hidden-text">Please enter your
+                        password</label>
+                </div>
+
+                <div style="width: 50%; float:right;padding: 0px 0px 0px 5px;">
+                    <div class="input-label-div">
+                        <label class="input-label">Confirm Password <span class="required-span">*</span></label>
+                    </div>
+                    <div class="lol">
+                        <input class="input-field" oninput="autoRemoveErrors()" type="password" id="passwordConfirm">
+                        <img id="passwordConfirmImg" onclick="togglePasswordConfirmView()" src="https://unpkg.com/ionicons@5.5.1/dist/svg/eye-off-outline.svg" data-pagespeed-url-hash="811706064" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                    </div>
+                    <label id="errorPasswordConfirm" style="position: relative;" class="hidden-text">Please confirm
+                        your password</label>
+                </div>
+            </div>
+
+            <div class="input-label-div">
+                <label class="tos-label" style="width: 100%;
+            margin: 0px 0px 15px 0px !important;"><span class="required-span">*</span> indicates required
+                    field</label>
+            </div>
+
+            <button class="submit-button" onclick="submitRegistration()">Submit</button>
+            <label class="hidden" id="additionalError">(message)</label>
+        </div>
+        <div id="registrationConfirmation" class="hidden">
+            <div style="min-height: 57px; margin-top: 15px;">
+                <header class="confirmation-header">Thank you for registering.</header>
+                <button onclick="quotePage()" style="float: right;
+            background: transparent;
+            border-radius: 5px;
+            outline: none;
+            border: 0px solid transparent;
+            color: white;
+            position: absolute;
+            top: 20px;
+            right: 60px;
+            ">
+
+                    <img style="height: 25px;
+            width: 25px;
+            position: absolute;
+            top: -5px;" src="https://unpkg.com/ionicons@5.5.1/dist/svg/close-circle-outline.svg" data-pagespeed-url-hash="3369767790" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                </button>
+            </div>
+            <div>
+                <img class="van-image" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/93436.svg" data-pagespeed-url-hash="2908271510" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+            </div>
+
+            <label class="confirmation-label">Please <a class="tos-link" onclick="navigateToLogin()">log in</a> to
+                book your delivery or alternatively, download our app.</label>
+            <div style="display: flex;">
+                <div class="app-icon-left"><img class="app-icon-left-img" onclick="navigateToPlayStore()" src="https://823366.smushcdn.com/2296410/wp-content/themes/deliveryapp/images/google-play-badge-new-1.png?lossy=1&amp;strip=1&amp;webp=1" data-pagespeed-url-hash="1853975828" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                </div>
+                <div class="app-icon-right"><img class="app-icon-right-img" onclick="navigateToIosStore()" src="https://823366.smushcdn.com/2296410/wp-content/themes/deliveryapp/images/perfect-appstore-badge.png?lossy=1&amp;strip=1&amp;webp=1" data-pagespeed-url-hash="1245691977" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="quickQuotePopup">
+    <div style="text-align: center; padding-bottom:20px;">
+
+    <h4 class="qck">Get Your Free Quote</h4>
+
+    </div>
+        <div class="progress-tracker-div" id="progressTracker">
+            <div class="tracker-item-one tracker-item-active" onclick="navigateToDeliveryDetails()" id="trackerItemOne"><label id="trackerLabelOne" class="tracker-label tracker-label-active">1</label>
+            </div>
+            <div class="tracker-item-two" onclick="submitQuote()" id="trackerItemTwo"><label id="trackerLabelTwo" class="tracker-label">2</label></div>
+        </div>
+        <div class="progress-label-div" id="progressTracker">
+            <label class="progress-label-title right font-style tracker-label-subtitle label-left">Delivery
+                Details</label>
+            <label class="progress-label-title font-style-small tracker-label-subtitle"></label>
+            <label class="progress-label-title left font-style tracker-label-subtitle label-right">Vehicle
+                Prices</label>
+        </div>
+        <div class="" id="frameStepOne">
+            
+            <div class="row">
+
+                <div class="input-item-left col-md-12">
+
+                    <div class="wildcard-style col-md-12">
+                        <p class="input-field-label font-style-large">
+                            Pick-up Postcode *
+                        </p>
+                    </div>
+
+                    <div class="input-container col-md-12" id="inputContainerPickup" style="background: #EDEDED;border-radius:5px;"><img src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/location_symbol.svg" style="background:transparent;" data-pagespeed-url-hash="4121082883" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                        <input class="input-field-quote pick-location " id="input-pickup" type="text" oninput="autocapitaliseFieldPickup()" placeholder="e.g. M3 4AP" name="usrnm" style="background: #EDEDED;border: 0px;color:#223039;">
+                        <span class="postcode_pickup_error" style="color: red;"><label class="hidden" id="errorLabelPickup"><img class="error-img" id="error-svg" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/bx_bxs-error.svg" data-pagespeed-url-hash="2925039386" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"><span class="error-span" id="errorSpanPickup"> The pick-up postcode is
+                                    required</span></label></span>
+                    </div>
+                </div>
+
+                <div class="input-item-right col-md-12">
+                    <div class="wildcard-style col-md-12">
+                        <p class="input-field-label font-style-large">
+                            Drop-off Postcode *
+                        </p>
+                    </div>
+
+                    <div class="input-container col-md-12" id="inputContainerDropoff" style="background:#EDEDED; border-radius:5px;"><img src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/location_symbol.svg" style="background:transparent;" width="20%" height="auto" data-pagespeed-url-hash="4121082883" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                        <input class="input-field-quote delivery-location" id="input-dropoff" type="text" oninput="autocapitaliseFieldDropoff()" placeholder="e.g. B5 5PN" name="usrnm" style="background:transparent;border: 0px;color:#223039;">
+                        <span class="postcode_pickup_error" style="color: red;"><label class="hidden" id="errorLabelDropoff"><img class="error-img" id="error-svg" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/bx_bxs-error.svg" data-pagespeed-url-hash="2925039386" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"><span class="error-span" id="errorSpanDropoff"> The drop-off postcode is
+                                    required</span></label></span>
+
+                    </div>
+                </div>
+
+                <div class="input-item-left col-md-12">
+                    <div class="wildcard-style col-md-12">
+                        <p class="input-field-label font-style-large">
+                            Email Address * <a class="information-anchor" onclick="informationClickEmail()" onmouseout="informationClickEmail()" onmouseover="informationClickEmail()"><img class="information-img" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/tooltip_desktop.svg" data-pagespeed-url-hash="180092857" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                            </a>
+                        </p>
+                        <div class="email-tooltip" id="emailTooltip" style="display: none;">
+                            <p class="tooltip-text">We will email you with a copy of your quotes.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="input-container col-md-12" id="inputContainerEmail" style="background: #EDEDED;border-radius:5px;"><img src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/email_icon.svg" style="background:transparent;" data-pagespeed-url-hash="326627523" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                        <input class="input-field-quote pick-location " id="input-email" type="text" oninput="autocapitaliseFieldPickup()" placeholder="e.g. name@mail.com" name="usrnm" style="background: #EDEDED;border: 0px;color:#223039;">
+                        <span class="postcode_pickup_error" style="color: red;"><label class="hidden" id="errorLabelEmail"><img class="error-img" id="error-svg" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/bx_bxs-error.svg" data-pagespeed-url-hash="2925039386" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"><span class="error-span"> Please enter your email address</span></label></span>
+                    </div>
+                </div>
+
+                <div class="input-item-right col-md-12">
+                    <div class="wildcard-style col-md-12">
+                        <p class="input-field-label font-style-large">
+                            Contact Number * <a class="information-anchor" onclick="informationClickContact()" onmouseout="informationClickContact()" onmouseover="informationClickContact()"><img class="information-img" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/tooltip_desktop.svg" data-pagespeed-url-hash="180092857" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                            </a>
+                        </p>
+                        <div class="email-tooltip left-5" id="contactTooltip" style="display: none;">
+                            <p class="tooltip-text">Just in case you need some assistance. </p>
+                        </div>
+
+                    </div>
+
+                    <div class="input-container col-md-12" id="inputContainerContact" style="background:#EDEDED; border-radius:5px;"><img src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/phone_icon.svg" style="background:transparent;" width="20%" height="auto" data-pagespeed-url-hash="2490045425" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                        <input class="input-field-quote delivery-location" id="input-contact" type="tel" oninput="autocapitaliseFieldDropoff()" minlength="11" maxlength="16" placeholder="e.g 07899989789" name="usrnm" style="background:transparent;border: 0px;color:#223039;">
+                        <span class="postcode_pickup_error" style="color: red;"><label class="hidden" id="errorLabelContact"><img class="error-img" id="error-svg" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/bx_bxs-error.svg" data-pagespeed-url-hash="2925039386" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"><span class="error-span" id="errorSpanContact"> Please enter your contact
+                                    number</span></label></span>
+                    </div>
+                </div>
+                <div class="input-item-left col-md-12 div-mini">
+                    <div>
+                        <label class="margin-align business-label font-style-large" style="color: #223039;">Are you a
+                            business?
+                            <div class="radio-input-div">
+                                <input class="radio-input" type="radio" id="radioYes" onclick="radioToggle()" name="fav_language" value="Yes" checked="checked">
+                                <label class="radio-label" for="Yes">Yes</label><br>
+                                <input class="radio-input" type="radio" id="no" onclick="radioToggle()" name="fav_language" value="no">
+                                <label class="radio-label" for="No">No</label><br>
+                            </div>
+                    </label></div>
+                </div>
+				<div class="input-item-right col-md-12 div-mini">
+                    <div id="companyNameDiv">
+                        <div class="wildcard-style col-md-12">
+                            <p class="input-field-label font-style-large" id="nameLabel">
+                                Company Name *
+                            </p>
+                        </div>
+                        <div class="input-container col-md-12" id="inputContainerName" style="background: #EDEDED;border-radius:5px;">
+                            <input class="input-field-quote pick-location " id="input-name" type="text" oninput="autocapitaliseFieldPickup()" placeholder="" name="usrnm" style="background: #EDEDED;border: 0px;color:#223039; padding:16px;">
+                            <span class="postcode_pickup_error" style="color: red;"><label class="hidden" id="errorLabelName"><img class="error-img" id="error-svg" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/bx_bxs-error.svg" data-pagespeed-url-hash="2925039386" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"><span id="nameSpanError" class="error-span"> Please enter your company
+                                        name</span></label></span>
+                        </div>
+                    </div>
+                </div>
+                <label class="required-field-label font-style-small">
+                    * indicates a required field
+                </label>
+                <div class="checkbox-div">
+                    <input class="margin-align checkbox-style" type="checkbox" id="checkboxInput" value="0" onclick="autoRemoveFormErrors()">
+                    <label class="tos-label-tos font-style" for="vehicle3" style="color: #223039;margin-left: 30px !important;
+                display: inherit !important;"> I've read and understood the <a class="tos-link" onclick="navigateToTermsAndService()">Terms &amp; Conditions</a> *<span class="required-span"></span></label>
+                    <span class="" style="color: red;"><label class="hidden" id="errorLabelCheckbox"><img class="error-img" id="error-svg" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/bx_bxs-error.svg" data-pagespeed-url-hash="2925039386" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"><span class="error-span" style="right: -5px; top: 3px;">Please confirm that you have read
+                                and understood the Terms &amp; Conditions</span></label></span>
+                </div>
+                <div class="col-md-6 tworw" style="margin-top: 20px;">
+                    <div class="jury">
+                        <div class="row">
+                            <div class="col-md-12" style="width:100%; padding-right: 0px;">
+                                <input class="btn rs" type="submit" onclick="submitQuote()" value="Get Vehicle Prices" style="border-style: solid; border-width: 2px; border-color: #ffffff; border-radius: 10px;margin-left:-5px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 tworw">
+                    <div class="jury">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="/*padding-bottom: 48px;*/" class="hidden" id="frameStepTwo">
+            <button class="back-button" onclick="navigateToDeliveryDetails()"><img src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/chevron-left-lg.svg" data-pagespeed-url-hash="1459207396" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></button>
+            <div class="header-div">
+                <label class="vehicle-page-title">Estimated Prices** </label>
+                <div class="toggle-div">
+                    <label class="switch">
+                        <input type="checkbox" style="right: -5px;" onclick="togglePriceDisplay()" id="priceToggle">
+                        <div class="slider round">
+                            <span class="on"></span>
+                            <span class="off"></span>
+                        </div>
+                    </label>
+                </div>
+                <label class="font-style toggle-label font-light">Excludes VAT</label>
+            </div>
+            <div class="vehicle-price-div" onclick="createAccount()">
+                <img class="vehicle-img" src="https://alpha-api.deliveryapp.com/images/vehicles/car.png" data-pagespeed-url-hash="1705721545" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                <label class="font-style-large vehicle-title vehicle-label">Car</label>
+                <label class="font-style-large vehicle-label vehicle-price-label" id="carLabel">£30.00</label>
+            </div>
+            <div class="vehicle-price-div" onclick="createAccount()">
+                <img class="vehicle-img" src="https://alpha-api.deliveryapp.com/images/vehicles/small-van.png" data-pagespeed-url-hash="2384635450" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                <label class="font-style-large vehicle-title vehicle-label">Small Van</label>
+                <label class="font-style-large vehicle-label vehicle-price-label" id="SVLabel">£30.00</label>
+            </div>
+            <div class="vehicle-price-div" onclick="createAccount()">
+                <img class="vehicle-img" src="https://alpha-api.deliveryapp.com/images/vehicles/medium-vehicle.png" data-pagespeed-url-hash="3541632973" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                <label class="font-style-large vehicle-title vehicle-label">Medium Van SWB</label>
+                <label class="font-style-large vehicle-label vehicle-price-label" id="MVLabel">£30.00</label>
+            </div>
+            <div class="vehicle-price-div" onclick="createAccount()">
+                <img class="vehicle-img" src="https://alpha-api.deliveryapp.com/images/vehicles/large-van.png" data-pagespeed-url-hash="1504711874" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                <label class="font-style-large vehicle-title vehicle-label">Large Van LWB</label>
+                <label class="font-style-large vehicle-label vehicle-price-label" id="LVLabel">£30.00</label>
+            </div>
+            <div class="vehicle-price-div" onclick="createAccount()">
+                <img class="vehicle-img" src="https://alpha-api.deliveryapp.com/images/vehicles/xlwb-van.png" data-pagespeed-url-hash="138789062" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                <label class="font-style-large vehicle-title vehicle-label">Extra Large Van</label>
+                <label class="font-style-large vehicle-label vehicle-price-label" id="XLVLabel">£30.00</label>
+            </div>
+            <div class="vehicle-price-div" onclick="createAccount()">
+                <img class="vehicle-img" src="https://alpha-api.deliveryapp.com/images/vehicles/luton.png" data-pagespeed-url-hash="3025298459" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                <label class="font-style-large vehicle-title vehicle-label">Luton Van</label>
+                <label class="font-style-large vehicle-label vehicle-price-label" id="LutonLabel">£30.00</label>
+            </div>
+            <label class="font-style-small full-width" style="margin: 10px 0px 0px 0px;">** VAT not applicable for
+                congestion charges</label>
+            <label class="font-style-small full-width" id="congestionHint" style="margin: 10px 0px 0px 0px;">* Includes applicable tolls and congestion charges</label>
+            <label id="accountCreationHint" class="font-style full-width" style="margin: 20px 0px 20px 0px;">Finish
+                creating your account to request your delivery today.</label>
+
+            <!-- <div id="createAccountDiv" class="col-md-6 tworw"> -->
+            <div id="createAccountDiv" class="create-account-btn">
+                <div class="jury">
+                    <div class="row">
+                        <div class="col-md-12" style="width:100%; padding-right: 0px; margin-left: 0px;">
+                            <input class="btn rs font-style-large" type="submit" onclick="createAccount()" value="Create Account" style="font-size: 18px; border-style: solid; border-width: 2px; border-color: #ffffff; border-radius: 10px;margin-left:-5px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="account-creation-div-hidden" id="accountCreationDiv" style="">
+                <div class="input-item-left col-md-12 input-item-mini input-div-mobile" style="margin-left: 0px !important; padding-bottom: 20px !important;">
+                    <div class="wildcard-style col-md-12" style="margin-left: 0px;">
+                        <p class="input-field-label no-padding label-mini font-style-large">
+                            Full Name *
+                        </p>
+                    </div>
+
+                    <div class="input-container col-md-12 btn-mini label-mini" id="inputContainerFirstName" style="background: #EDEDED;border-radius:5px; margin-left: 0px !important;"><img src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/location_symbol.svg" style="background:transparent; display: none;" data-pagespeed-url-hash="4121082883" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                        <input class="input-field-quote pick-location " id="inputFirstName" type="text" oninput="autocapitaliseFieldPickup()" placeholder="John" name="usrnm" style="background: #EDEDED;border: 0px;color:#223039; padding: 0px 0px 0px 10px;">
+                        <span class="postcode_pickup_error" style="color: red;"><label class="hidden" id="errorLabelFirstName"><img class="error-img" id="error-svg" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/bx_bxs-error.svg" data-pagespeed-url-hash="2925039386" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"><span class="error-span" id="errorSpanFirstName"> Please enter your full
+                                    name</span></label></span>
+                    </div>
+                </div>
+
+                <div class="input-item-right col-md-12 input-item-mini input-div-mobile" style="padding-right: 0px !important; padding-bottom: 20px !important;">
+                    <div class="wildcard-style col-md-12">
+                        <p class="input-field-label no-padding label-mini font-style-large">
+                            Password *
+                        </p>
+                    </div>
+
+                    <div class="input-container col-md-12 btn-mini label-mini" id="inputContainerPassword" style="background: #EDEDED;border-radius:5px; ">
+                        <input class="input-field-quote pick-location " oninput="autoRemovePasswordError()" id="passwordInput" type="password" placeholder="" autocomplete="off" name="usrnm" style="background: #EDEDED;border: 0px;color:#223039; padding: 0px 0px 0px 10px;">
+                        <img id="passwordImgShow" onclick="togglePasswordDisplay()" class="password-img" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/hide_eye_updated.svg" data-pagespeed-url-hash="2937714123" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                        <img id="passwordImgHide" onclick="togglePasswordDisplay()" class="hidden" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/show_pwd_icon.svg" data-pagespeed-url-hash="909133922" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                    </div>
+                    <label class="password-hint">Min 8 characters</label>
+                    <span class="postcode_pickup_error password-error" style="color: red; position: relative;top: 0px;left: 0px;"><label class="error-label" id="errorLabelPassword" style="display: none;"><img class="error-img" id="error-svg" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/bx_bxs-error.svg" data-pagespeed-url-hash="2925039386" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"><span style="margin-left: 15px;" class="error-span" id="passwordErrorSpan"> Password field
+                                is required</span></label></span>
+                </div>
+
+                <div style="float: left !important; padding: 0px 0px 0px 16px ; margin-top: 30px; margin-left: 0px;" class="input-item-left col-md-12 input-item-mini">
+
+                    <div class="wildcard-style col-md-12">
+                        <p style="color: transparent !important;" class="input-field-label no-padding input-field-mobile">
+                            .
+                        </p>
+                    </div>
+
+                    <div class="input-container col-md-12 btn-mini label-mini" id="inputContainerPickup" style="background: #EDEDED;border-radius:10px; padding: 0px;">
+                        <input class="input-field-quote pick-location btn-mini" id="input-pickup" type="button" onclick="registerAccount()" value="Submit" name="usrnm" style="background: #223039;border: 1px solid white;color:#fff; font-size: 18px;font-weight: 600;">
+                        <span class="postcode_pickup_error" style="color: red;"><label class="hidden" id="errorLabelPickup"><img class="error-img" id="error-svg" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/bx_bxs-error.svg" data-pagespeed-url-hash="2925039386" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"><span class="error-span"> The pick-up postcode is required</span></label></span>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="quote-again-div">
+                <a class="quote-again-anchor" onclick="navigateToDeliveryDetails()"><img style="padding-right: 5px; width:24px;" src="https://www.deliveryapp.com/wp-content/themes/deliveryapp/images/chevron-left-lg.svg" data-pagespeed-url-hash="1459207396" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">Get another
+                    quote</a>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>
+
+
+<script>
+//declare html elements
+const registrationPagePopup = document.getElementById("registrationPagePopup");
+const quickQuotePopup = document.getElementById("quickQuotePopup");
+const framebody = document.getElementById("framebody");
+const radioYes = document.getElementById("radioYes");
+const nameLabel = document.getElementById("nameLabel");
+const passwordImgShow = document.getElementById("passwordImgShow");
+const passwordImgHide = document.getElementById("passwordImgHide");
+const passwordInput = document.getElementById("passwordInput");
+const createAccountDiv = document.getElementById("createAccountDiv");
+const accountCreationDiv = document.getElementById("accountCreationDiv");
+const errorLabelPassword = document.getElementById("errorLabelPassword");
+const emailTooltip = document.getElementById("emailTooltip");
+const contactTooltip = document.getElementById("contactTooltip");
+const priceToggle = document.getElementById("priceToggle");
+const inputContainerPassword = document.getElementById("inputContainerPassword");
+const passwordErrorSpan = document.getElementById("passwordErrorSpan");
+const nameSpanError = document.getElementById("nameSpanError");
+const accountCreationHint = document.getElementById("accountCreationHint");
+const companyNameDiv = document.getElementById("companyNameDiv");
+const inputFirstName = document.getElementById("inputFirstName");
+const inputSurname = document.getElementById("inputSurname");
+const errorLabelFirstName = document.getElementById("errorLabelFirstName");
+const inputContainerFirstName = document.getElementById("inputContainerFirstName");
+const errorLabelSurname = document.getElementById("errorLabelSurname");
+const inputContainerSurname = document.getElementById("inputContainerSurname");
+const inputDropoff = document.getElementById("input-dropoff");
+const inputPickup = document.getElementById("input-pickup");
+const buttonCallback = document.getElementById("button-callback");
+const buttonBook = document.getElementById("button-book");
+const priceSpan = document.getElementById("priceSpan");
+const priceDisplay = document.getElementById("priceDisplay");
+const errorSvg = document.getElementById("error-svg");
+const firstName = document.getElementById("firstName");
+const lastName = document.getElementById("lastName");
+const contactNumber = document.getElementById("contactNumber");
+const emailAddress = document.getElementById("emailAddress");
+const password = document.getElementById("password");
+const passwordConfirm = document.getElementById("passwordConfirm");
+const checkboxInput = document.getElementById("checkboxInput");
+const registrationPage = document.getElementById("registrationPage");
+const registrationConfirmation = document.getElementById("registrationConfirmation");
+const passwordImg = document.getElementById("passwordImg");
+const passwordConfirmImg = document.getElementById("passwordConfirmImg");
+const errorLabel = document.getElementById("errorLabel");
+const errorFirstName = document.getElementById("errorFirstName");
+const errorLastName = document.getElementById("errorLastName");
+const errorContactNumber = document.getElementById("errorContactNumber");
+const errorEmailAddress = document.getElementById("errorEmailAddress");
+const errorPassword = document.getElementById("errorPassword");
+const errorPasswordConfirm = document.getElementById("errorPasswordConfirm");
+const popup = document.getElementById("popup");
+const contactNumberDiv = document.getElementById("contactNumberDiv");
+const additionalError = document.getElementById("additionalError");
+const errorCheckbox = document.getElementById("errorCheckbox");
+const inputContainerPickup = document.getElementById("inputContainerPickup");
+const inputContainerDropoff = document.getElementById("inputContainerDropoff");
+const inputContainerEmail = document.getElementById("inputContainerEmail");
+const inputContainerContact = document.getElementById("inputContainerContact");
+const inputContainerName = document.getElementById("inputContainerName");
+const inputEmail = document.getElementById("input-email");
+const inputContact = document.getElementById("input-contact");
+const inputName = document.getElementById("input-name");
+const errorLabelPickup = document.getElementById("errorLabelPickup");
+const errorLabelDropoff = document.getElementById("errorLabelDropoff");
+const errorLabelEmail = document.getElementById("errorLabelEmail");
+const errorLabelContact = document.getElementById("errorLabelContact");
+const errorLabelName = document.getElementById("errorLabelName");
+const errorLabelCheckbox = document.getElementById("errorLabelCheckbox");
+const errorSpanContact = document.getElementById("errorSpanContact");
+const errorSpanPickup = document.getElementById("errorSpanPickup");
+const errorSpanDropoff = document.getElementById("errorSpanDropoff");
+const frameStepOne = document.getElementById("frameStepOne");
+const frameStepTwo = document.getElementById("frameStepTwo");
+const trackerItemOne = document.getElementById("trackerItemOne");
+const trackerItemTwo = document.getElementById("trackerItemTwo");
+//const trackerItemThree = document.getElementById("trackerItemThree");
+const trackerLabelOne = document.getElementById("trackerLabelOne");
+const trackerLabelTwo = document.getElementById("trackerLabelTwo");
+
+const carLabel = document.getElementById("carLabel");
+const SVLabel = document.getElementById("SVLabel");
+const MVLabel = document.getElementById("MVLabel");
+const LVLabel = document.getElementById("LVLabel");
+const XLVLabel = document.getElementById("XLVLabel");
+const LutonLabel = document.getElementById("LutonLabel");
+const congestionHint = document.getElementById("congestionHint");
+
+
+const xhr = new XMLHttpRequest();
+
+var autoUpdatePrice = false;
+var errorMessage = "";
+var errorMessageEmail = "";
+var errorMessagePassword = "";
+var errorMessageNumber = "";
+
+let errorCount = 0;
+let canSendRequest = false;
+let vehiclePrices = "";
+let stepTwoActive = false;
+let informationHover = false;
+let informationHoverContact = false;
+let passwordHidden = true;
+let containsCongestion = false;
+
+function togglePriceDisplay() {
+    if (priceToggle.checked) {
+        carLabel.innerHTML = "£" + vehiclePrices.items[0].price_vat;
+        SVLabel.innerHTML = "£" + vehiclePrices.items[1].price_vat;
+        MVLabel.innerHTML = "£" + vehiclePrices.items[2].price_vat;
+        LVLabel.innerHTML = "£" + vehiclePrices.items[3].price_vat;
+        XLVLabel.innerHTML = "£" + vehiclePrices.items[4].price_vat;
+        LutonLabel.innerHTML = "£" + vehiclePrices.items[5].price_vat;
+    }
+    else {
+        carLabel.innerHTML = "£" + vehiclePrices.items[0].price_without_vat_with_toll;
+        SVLabel.innerHTML = "£" + vehiclePrices.items[1].price_without_vat_with_toll;
+        MVLabel.innerHTML = "£" + vehiclePrices.items[2].price_without_vat_with_toll;
+        LVLabel.innerHTML = "£" + vehiclePrices.items[3].price_without_vat_with_toll;
+        XLVLabel.innerHTML = "£" + vehiclePrices.items[4].price_without_vat_with_toll;
+        LutonLabel.innerHTML = "£" + vehiclePrices.items[5].price_without_vat_with_toll;
+    }
+    if(containsCongestion){
+        carLabel.innerHTML += "*";
+        SVLabel.innerHTML += "*";
+        MVLabel.innerHTML += "*";
+        LVLabel.innerHTML += "*";
+        XLVLabel.innerHTML += "*";
+        LutonLabel.innerHTML += "*";
+        congestionHint.className = "font-style-small";
+    }
+    else{
+        congestionHint.className = "hidden";
+    }
+
+}
+
+
+function autoRemovePasswordError() {
+    if (passwordInput.value.length >= 8) {
+        errorLabelPassword.style = "display: none;";
+        inputContainerPassword.style = "background: #EDEDED;border-radius:5px; ";
+    }
+}
+
+function registerAccountErrors() {
+    //if (inputSurname.value == "") {
+        //errorLabelSurname.className = "";
+        //inputContainerSurname.className += " input-error";
+    //}
+    //else {
+        //inputContainerSurname.className = "input-container col-md-12";
+        //errorLabelSurname.className = "hidden";
+    //}
+    if (inputFirstName.value == "") {
+        errorLabelFirstName.className = "";
+        inputContainerFirstName.className += " input-error";
+    }
+    else {
+        inputContainerFirstName.className = "input-container col-md-12";
+        errorLabelFirstName.className = "hidden";
+    }
+}
+
+function registerAccount() {
+    registerAccountErrors();
+
+    errorLabelPassword.style = "display: none;";
+    inputContainerPassword.style = "background: #EDEDED;border-radius:5px; ";
+
+    if (passwordInput.value.length < 8) {
+        errorLabelPassword.style = "";
+        inputContainerPassword.style = "background: #EDEDED;border-radius:5px; border: 2px solid red;";
+    }
+
+    if (passwordInput.value.length >= 8) {
+        xhr.open("POST", "https://alpha-api.deliveryapp.com/api/user/register", true);
+        xhr.setRequestHeader('Content-type', 'application/json');
+        xhr.setRequestHeader('Accept', 'application/json');
+
+        xhr.onload = function () {
+            if (this.status === 200) {
+                switchView();
+            } else if (this.status === 422) {
+                let errorMsg = JSON.parse(this.responseText);
+
+                errorLabelPassword.style = "";
+                passwordErrorSpan.innerHTML = errorMsg.message;
+
+                $.each(errorMsg.errors, function( index, value ) {
+                    passwordErrorSpan.innerHTML =  value ;
+                });
+            } else if (this.status === 206 || this.status === 302) {
+                errorLabelPassword.style = "";
+                passwordErrorSpan.innerHTML = "You have already registered an account!";
+            } else {
+                errorLabelPassword.style = "";
+                passwordErrorSpan.innerHTML = "Error, please try again.";
+            }
+        }
+        let phoneNo = inputContact.value;
+        if (inputContact.value[0] == "0") {
+            phoneNo = phoneNo.substring(1);
+        }
+        let data = {
+            "email": inputEmail.value,
+            "password": passwordInput.value,
+            "role": "customer", // WE NEED ADD GUEST FOR REGISTER VALIDATION
+            "terms": 1,
+            "details" : {
+                "full_name": inputFirstName.value,
+                "contact_number": phoneNo,
+                "is_business": false
+            }
+        }
+
+        xhr.send(JSON.stringify(data));
+    }
+
+    console.log("s");
+    return;
+}
+
+function togglePasswordDisplay() {
+    if (passwordHidden) {
+        passwordImgShow.className = "hidden";
+        passwordImgHide.className = "password-img";
+        passwordInput.type = "";
+    }
+    else {
+        passwordImgHide.className = "hidden";
+        passwordImgShow.className = "password-img";
+        passwordInput.type = "password";
+    }
+    passwordHidden = !passwordHidden;
+}
+
+function createAccount() {
+    if (stepTwoActive) {
+        navigateToVehiclePrices();
+        createAccountDiv.style = "display: none;";
+        accountCreationDiv.className = "account-creation-div";
+        frameStepTwo.style = "";
+        accountCreationHint.innerHTML = "Set a password to create your account and request your delivery today.";
+    }
+}
+
+function radioToggle() {
+    if (radioYes.checked) {
+        companyNameDiv.style = "";
+        nameLabel.innerHTML = "Company Name *";
+        nameSpanError.innerHTML = " Please enter your company name";
+        priceToggle.checked = false;
+    }
+    else {
+        companyNameDiv.style = "display: none;";
+        nameLabel.innerHTML = "Full Name *";
+        nameSpanError.innerHTML = " Please enter your full name";
+        priceToggle.checked = true;
+    }
+}
+
+function informationClickEmail() {
+    informationHover = !informationHover;
+    if (!informationHover) {
+        emailTooltip.style = "display: none;";
+    }
+    else {
+        emailTooltip.style = "";
+    }
+}
+
+function informationClickContact() {
+    informationHoverContact = !informationHoverContact;
+    if (!informationHoverContact) {
+        contactTooltip.style = "display: none;";
+    }
+    else {
+        contactTooltip.style = "";
+    }
+}
+
+
+function registrationPopUp() {
+    if (window.innerWidth < 500) {
+        //window.parent.scrollTo(0, 300);
+    }
+    registrationPagePopup.className = "body";
+    quickQuotePopup.className = "hidden";
+    framebody.className = "fullwidth-registration";
+}
+
+function quotePage() {
+    registrationPagePopup.className = "hidden";
+    quickQuotePopup.className = "";
+    framebody.className = "fullwidth";
+    registrationPage.className = "body";
+    registrationConfirmation.className = "hidden";
+}
+
+function navigateToRegistration() {
+    registrationPage.className = "body";
+    registrationConfirmation.className = "hidden";
+}
+
+function detectMob() {
+    return ((window.innerWidth <= 600) && (window.innerHeight <= 600));
+}
+
+function callNumber() {
+    if (window.innerWidth < 500) {
+        window.top.location.href = "tel:03450660100";
+    }
+}
+
+function switchView() {
+    window.top.location.href = "https://www.deliveryapp.com/thank-you-for-registering/";
+
+}
+
+function autocapitaliseFieldPickup() {
+    autoRemoveFormErrors();
+    var inputPickup = document.getElementById("input-pickup");
+    //new google.maps.places.Autocomplete(inputPickup);
+    if (inputPickup.value != null && inputPickup.value != "") {
+        inputPickup.className = "input-field-upper pickup-location";
+    }
+    else if (inputPickup.value == "") {
+        inputPickup.className = "input-field-quote pickup-location";
+    }
+}
+
+function isNumber(str) {
+    var pattern = /^\d+$/;
+    return pattern.test(str);  // returns a boolean
+}
+
+
+function HighlightTrackerThree() {
+    trackerItemOne.className = "tracker-item-one";
+    trackerLabelOne.className = "tracker-label";
+    trackerItemTwo.className = "tracker-item-one";
+    trackerLabelTwo.className = "tracker-label";
+    //trackerItemThree.className = "tracker-item-one tracker-item-active";
+}
+
+function navigateToVehiclePrices() {
+    togglePriceDisplay();
+    frameStepOne.className = "hidden";
+    frameStepTwo.className = "";
+    trackerItemOne.className = "tracker-item-one";
+    trackerLabelOne.className = "tracker-label";
+    trackerItemTwo.className = "tracker-item-one tracker-item-active";
+    trackerLabelTwo.className = "tracker-label tracker-label-active";
+    stepTwoActive = true;
+    if (window.innerWidth < 500) {
+        //window.parent.scrollTo(0, 830);
+    }
+    else {
+        //window.parent.scrollTo(0, 100);
+    }
+}
+
+// go back
+function navigateToDeliveryDetails() {
+    frameStepOne.className = "";
+    frameStepTwo.className = "hidden";
+    trackerItemTwo.className = "tracker-item-one";
+    trackerLabelTwo.className = "tracker-label";
+    trackerItemOne.className = "tracker-item-one tracker-item-active";
+    trackerLabelOne.className = "tracker-label tracker-label-active";
+    //trackerItemThree.className = "tracker-item-one";
+    errorLabelPassword.style = "display: none;";
+    inputContainerPassword.style = "background: #EDEDED;border-radius:5px; ";
+    passwordErrorSpan.innerHTML = "Please make sure all the details are correct";
+}
+
+function autocapitaliseFieldDropoff() {
+    autoRemoveFormErrors();
+    var inputDropoff = document.getElementById("input-dropoff");
+    //new google.maps.places.Autocomplete(inputDropoff);
+
+    if (inputDropoff.value != null && inputDropoff.value != "") {
+        inputDropoff.className = "input-field-upper delivery-location";
+        $('.postcode_delivery_error').html('');
+    }
+    else if (inputDropoff.value == "") {
+        inputDropoff.className = "input-field-quote delivery-location";
+    }
+}
+
+function myFunction(value) {
+    $('.vehicle_id_error').html('');
+    id = value;
+    $('.remove-active').removeClass('active');
+    $('.account-heading' + id).addClass('active');
+    if (inputPickup.value != "" && inputDropoff.value != "" && autoUpdatePrice) {
+        this.submitQuote();
+    }
+
+    if (this.detailObj != undefined && autoUpdatePrice) {
+        this.submitQuote();
+    }
+
+    // Instantiate an new XHR Object
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET","https://alpha-api.deliveryapp.com/api/v1/vehicles/" + id, true);
+    xhr.onload = function () {
+        if (this.status === 200) {
+            detailObj = JSON.parse(this.responseText);
+        }
+        else {
+            console.log("File not found");
+        }
+    }
+    xhr.send();
+}
+
+function autoRemoveQuoteErrors() {
+    if (inputPickup.value == "") {
+        inputContainerPickup.className += " input-error";
+        errorLabelPickup.className = "";
+    }
+    if (inputDropoff.value == "") {
+        inputContainerDropoff.className += " input-error";
+        errorLabelDropoff.className = "";
+    }
+    if (inputEmail.value == "") {
+        inputContainerEmail.className += " input-error";
+        errorLabelEmail.className = "";
+
+    }
+    if (inputContact.value == "") {
+        inputContainerContact.className += " input-error";
+        errorLabelContact.className = "";
+
+    }
+    if (inputName.value == "") {
+        inputContainerName.className += " input-error";
+        errorLabelName.className = "";
+
+    }
+}
+
+function autoRemoveFormErrors() {
+    if (inputFirstName.value != "") {
+        inputContainerFirstName.className = "input-container col-md-12";
+        errorLabelFirstName.className = "hidden";
+    }
+    //    if (inputPickup.value != "") {
+    //  inputContainerPickup.className = "input-container col-md-12";
+    //    errorLabelPickup.className = "hidden";
+    //}
+    if (inputDropoff.value != "") {
+        inputContainerDropoff.className = "input-container col-md-12";
+        errorLabelDropoff.className = "hidden";
+    }
+    if (inputEmail.value != "" && inputEmail.value.includes('@') && inputEmail.value.includes('.')) {
+        inputContainerEmail.className = "input-container col-md-12";
+        errorLabelEmail.className = "hidden";
+    }
+    if (inputContact.value != "" && inputContact.value.length >= 10 && isNumber(inputContact.value)) {
+        inputContainerContact.className = "input-container col-md-12";
+        errorLabelContact.className = "hidden";
+    }
+    if (inputName.value != "") {
+        inputContainerName.className = "input-container col-md-12";
+        errorLabelName.className = "hidden";
+    }
+    if (checkboxInput.checked == true) {
+        errorLabelCheckbox.className = "hidden";
+        checkboxInput.style = "";
+    }
+}
+
+function formErrors() {
+    if (inputPickup.value == "") {
+        inputContainerPickup.className += " input-error";
+        errorLabelPickup.className = "";
+        errorSpanPickup.innerHTML = " The pick-up postcode is required";
+    }
+    else {
+        inputContainerPickup.className = "input-container col-md-12";
+        errorLabelPickup.className = "hidden";
+    }
+    if (inputDropoff.value == "") {
+        inputContainerDropoff.className += " input-error";
+        errorLabelDropoff.className = "";
+        errorSpanDropoff.innerHTML = " The drop-off postcode is required";
+    }
+    else {
+        inputContainerDropoff.className = "input-container col-md-12";
+        errorLabelDropoff.className = "hidden";
+    }
+    if (inputEmail.value == "") {
+        inputContainerEmail.className += " input-error";
+        errorLabelEmail.className = "";
+    }
+    else if (!inputEmail.value.includes('@') || !inputEmail.value.includes('.')) {
+        inputContainerEmail.className += " input-error";
+        errorLabelEmail.className = "";
+    }
+    else {
+        inputContainerEmail.className = "input-container col-md-12";
+        errorLabelEmail.className = "hidden";
+    }
+    if (inputContact.value == "") {
+        inputContainerContact.className += " input-error";
+        errorLabelContact.className = "";
+
+    }
+    else if (inputContact.value.length < 10 && isNumber(inputContact.value)) {
+        console.log(inputContact.value.length);
+        inputContainerContact.className += " input-error";
+        errorLabelContact.className = "";
+        errorSpanContact.innerHTML = "Invalid mobile format";
+    }
+    else {
+        inputContainerContact.className = "input-container col-md-12";
+        errorLabelContact.className = "hidden";
+    }
+    if (inputName.value == "") {
+        inputContainerName.className += " input-error";
+        errorLabelName.className = "";
+    }
+    else {
+        inputContainerName.className = "input-container col-md-12";
+        errorLabelName.className = "hidden";
+    }
+    if (checkboxInput.checked == false) {
+        errorLabelCheckbox.className = "visible";
+        checkboxInput.style = "border: 1px solid red;";
+    }
+    else {
+        errorLabelCheckbox.className = "hidden";
+        checkboxInput.style = "";
+    }
+}
+
+function invalidPostcodeError() {
+    if (inputEmail.value.includes('@') && inputEmail.value.includes('.')) {
+        errorSpanDropoff.innerHTML = " Please double check postcode";
+        errorSpanPickup.innerHTML = " Please double check postcode";
+        inputContainerPickup.className += " input-error";
+        errorLabelPickup.className = "";
+        inputContainerDropoff.className += " input-error";
+        errorLabelDropoff.className = "";
+    }
+}
+
+function submitQuote() {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        'event': 'getAQuote'
+    });
+
+    formErrors();
+    if (checkboxInput.checked && isNumber(inputContact.value) && inputContact.value.length >= 10) {
+        let params = {
+            postcode_delivery: inputDropoff.value,
+            postcode_pickup: inputPickup.value,
+            name: inputName.value,
+            email: inputEmail.value,
+            phone: inputContact.value,
+            url: 'http://www.deliveryapp.com/quote/'
+        }
+        if (!radioYes.checked) {
+            params.name = "NotProvided";
+        }
+
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://alpha-api.deliveryapp.com/api/wordpress/quote", true);
+        xhr.setRequestHeader('Content-type', 'application/json');
+		
+        xhr.onload = function () {
+            containsCongestion = false;
+            try {
+                data = JSON.parse(this.responseText);
+                console.log(data);
+            }
+            catch {
+                console.log("error");
+            }
+            if (this.status == 200) {
+                if (inputEmail.value.includes('@') && inputEmail.value.includes('.')) {
+                    vehiclePrices = data;
+                    let congestionPrice = parseInt(vehiclePrices.items[0].congestion);
+                    if(congestionPrice > 0){
+                        console.log('Contains congestion');
+                        containsCongestion = true;
+                        navigateToVehiclePrices();
+                        autoUpdatePrice = true;
+                    }
+                    else{
+                        navigateToVehiclePrices();
+                    }
+                }
+            }
+            else if (this.status === 500) {
+                invalidPostcodeError();
+            }
+            else if (this.status === 422) {
+                console.log("422 error");
+            }
+        }
+        xhr.send(JSON.stringify(params));
+    }
+}
+
+function resetButton() {
+    $('.pick-location').val('');
+    $('.delivery-location').val('');
+    $('.remove-active').removeClass('active');
+    $('.per-mile-price').html("£" + "0.00");
+    autoUpdatePrice = false;
+    inputPickup.value = "";
+    inputDropoff.value = "";
+    myFunction(null);
+    autocapitaliseFieldDropoff();
+    autocapitaliseFieldPickup();
+    buttonBook.className = "hidden";
+    buttonCallback.className = "hidden";
+}
+
+function acceptTerms() {
+    inputContainerPickup.className += " input-error";
+    inputContainerDropoff.className += " input-error";
+    inputContainerEmail.className += " input-error";
+    inputContainerContact.className += " input-error";
+    inputContainerName.className += " input-error";
+    errorLabel.className = "";
+}
+
+function navigateToTermsAndService() {
+    window.open("https://www.deliveryapp.com/terms-conditions/");
+}
+
+function navigateToIosStore() {
+    window.top.location.href = "https://apps.apple.com/gb/app/deliverehub/id1309637944";
+}
+
+function navigateToPlayStore() {
+    window.top.location.href = "https://play.google.com/store/apps/details?id=com.deliverehub.app&hl=en_GB&gl=US";
+}
+
+function navigateToLogin() {
+    window.top.location.href = "https://portal.deliveryapp.com/";
+}
+
+function togglePasswordView() {
+    if (password.type == "password") {
+        password.type = "";
+        passwordImg.src = "https://unpkg.com/ionicons@5.5.1/dist/svg/eye-outline.svg";
+    }
+    else {
+        password.type = "password";
+        passwordImg.src = "https://unpkg.com/ionicons@5.5.1/dist/svg/eye-off-outline.svg";
+    }
+}
+
+function togglePasswordConfirmView() {
+    if (passwordConfirm.type == "password") {
+        passwordConfirm.type = "";
+        passwordConfirmImg.src = "https://unpkg.com/ionicons@5.5.1/dist/svg/eye-outline.svg";
+    }
+    else {
+        passwordConfirm.type = "password";
+        passwordConfirmImg.src = "https://unpkg.com/ionicons@5.5.1/dist/svg/eye-off-outline.svg";
+    }
+}
+
+function submitRegistration() {
+    if (contactNumber.value.length >= 10 && password.value.length >= 8 && checkboxInput.checked && firstName.value != "" && lastName.value != "" && emailAddress.value != "" && contactNumber.value != "" && password.value != "" && passwordConfirm.value != "" && password.value == passwordConfirm.value && emailAddress.value.includes('@')) {
+        const xhr = new XMLHttpRequest();
+        errorMessage = "";
+        errorMessageEmail = "";
+        errorMessageNumber = "";
+        errorMessagePassword = "";
+        displayErrors();
+        let number = "+44" + contactNumber.value;
+        let data = {
+            "name": firstName.value,
+            "surname": lastName.value,
+            "mobile_number": number,
+            "email": emailAddress.value,
+            "password": password.value,
+            "password_confirmation": passwordConfirm.value,
+            "terms": 1
+        }
+        xhr.open("POST","https://alpha-api.deliveryapp.com/api/user/register", true);
+        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.onload = function () {
+            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                errorMessage = "";
+                errorMessageEmail = "";
+                errorMessageNumber = "";
+                errorMessagePassword = "";
+                switchView();
+            }
+            else {
+                let object = JSON.parse(this.responseText);
+                errorMessage = "";
+                errorMessageEmail = "";
+                errorMessageNumber = "";
+                errorMessagePassword = "";
+                for (key in object) {
+                    if (object[key][0] != undefined) {
+                        if (object[key][0].includes("email")) {
+                            if (object[key][0] != "The email has already been taken.") {
+                                errorMessageEmail = object[key][0];
+                            }
+                            errorMessageEmail = "Email already in use";
+                        }
+                        if (object[key][0].includes("number")) {
+                            if (object[key][0] != "The mobile number format is invalid.") {
+                                errorMessageNumber = object[key][0];
+                            }
+                            errorMessageNumber = "Invalid number format";
+                        }
+                        if (object[key][0].includes("password")) {
+                            errorMessagePassword = object[key][0];
+                        }
+                    }
+                }
+                displayErrors();
+            }
+        }
+        xhr.send(JSON.stringify(data));
+    }
+    else {
+        displayErrors();
+    }
+}
+
+function autoRemoveErrors() {
+    if (firstName.value == "") {
+    }
+    else {
+        errorFirstName.className = "hidden-text";
+        firstName.className = "input-field";
+    }
+    if (lastName.value == "") {
+    }
+    else {
+        errorLastName.className = "hidden-text";
+        lastName.className = "input-field";
+    }
+    if (contactNumber.value == "") {
+    }
+    else {
+        errorContactNumber.className = "hidden-text";
+        contactNumber.className = "input-field";
+    }
+    if (emailAddress.value == "") {
+    }
+    else if (!emailAddress.value.includes('@') || emailAddress.value.includes(' ')) {
+    }
+    else {
+        errorEmailAddress.className = "hidden-text";
+        emailAddress.className = "input-field";
+    }
+    if (password.value == "") {
+    }
+    else {
+        errorPassword.className = "hidden-text";
+        password.className = "input-field";
+    }
+    if (passwordConfirm.value == "") {
+    }
+    else {
+        passwordConfirm.className = "input-field";
+        errorPasswordConfirm.className = "hidden-text";
+    }
+    if (password.value != passwordConfirm.value) {
+    }
+    else {
+        errorPasswordConfirm.className = "hidden-text";
+        passwordConfirm.className = "input-field";
+    }
+    if (!checkboxInput.checked) {
+    }
+    else {
+        errorCheckbox.className = "hidden-text";
+    }
+}
+
+
+function displayErrors() {
+    if (firstName.value == "") {
+        errorFirstName.className = "error-label";
+        firstName.className = "input-field-error";
+    }
+    else {
+        errorFirstName.className = "hidden-text";
+        firstName.className = "input-field";
+    }
+    if (lastName.value == "") {
+        errorLastName.className = "error-label";
+        lastName.className = "input-field-error";
+    }
+    else {
+        errorLastName.className = "hidden-text";
+        lastName.className = "input-field";
+    }
+    if (contactNumber.value == "") {
+        errorContactNumber.className = "error-label";
+        contactNumber.className = "input-field-error";
+        errorContactNumber.innerHTML = "Contact number required";
+    }
+    else if (contactNumber.value.length < 10) {
+        errorContactNumber.className = "error-label";
+        contactNumber.className = "input-field-error";
+        errorContactNumber.innerHTML = "Invalid number format";
+    }
+    else if (errorMessageNumber != "") {
+        errorContactNumber.className = "error-label";
+        contactNumber.className = "input-field-error";
+        errorContactNumber.innerHTML = errorMessageNumber;
+    }
+    else {
+        errorContactNumber.className = "hidden-text";
+        contactNumber.className = "input-field";
+    }
+    if (emailAddress.value == "") {
+        errorEmailAddress.className = "error-label";
+        errorEmailAddress.innerHTML = "Email address required";
+        emailAddress.className = "input-field-error";
+    }
+    else if (!emailAddress.value.includes('@') || emailAddress.value.includes(' ')) {
+        errorEmailAddress.className = "error-label";
+        errorEmailAddress.innerHTML = "Invalid email format";
+        emailAddress.className = "input-field-error";
+    }
+    else if (errorMessageEmail != "") {
+        errorEmailAddress.className = "error-label";
+        errorEmailAddress.innerHTML = errorMessageEmail;
+        emailAddress.className = "input-field-error";
+    }
+    else {
+        errorEmailAddress.className = "hidden-text";
+        emailAddress.className = "input-field";
+    }
+    if (password.value == "") {
+        errorPassword.className = "error-label";
+        password.className = "input-field-error";
+        errorPassword.innerHTML = "Please confirm your password";
+    }
+    else if (password.value.length < 8) {
+        errorPassword.className = "error-label";
+        password.className = "input-field-error";
+        errorPassword.innerHTML = "Minimum 8 characters required";
+    }
+    else {
+        errorPassword.className = "hidden-text";
+        password.className = "input-field";
+        // 
+    }
+    if (passwordConfirm.value == "") {
+        passwordConfirm.className = "input-field-error";
+        errorPasswordConfirm.className = "error-label";
+        errorPasswordConfirm.textContent = "Please confirm your password";
+    }
+    else {
+        passwordConfirm.className = "input-field";
+        errorPasswordConfirm.className = "hidden-text";
+    }
+    if (password.value != passwordConfirm.value) {
+        errorPasswordConfirm.className = "error-label";
+        errorPasswordConfirm.textContent = "Passwords do not match";
+        passwordConfirm.className = "input-field-error";
+    }
+    else {
+        errorPasswordConfirm.className = "hidden-text";
+        passwordConfirm.className = "input-field";
+    }
+    if (!checkboxInput.checked) {
+        errorCheckbox.className = "error-label";
+    }
+    else {
+        errorCheckbox.className = "hidden-text";
+    }
+}
+
+</script>
+<!-- end detail api fetcg -->
+<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+</script>-->
+        </div>
