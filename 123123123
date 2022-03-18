@@ -1,16 +1,6 @@
 <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQPklmkB_SF3Sx00TNRzs21qrmR9DT2_s&amp;sensor=false&amp;libraries=places" type="text/javascript"></script>
-<div id="framebody" class="fullwidth quick-quote-form">
-    <div style="padding-bottom: 20px;" class="hidden" id="registrationPagePopup">
-        <div id="registrationPage">
-            <div style="min-height: 57px; margin-top: 15px;">
-                <header style="float: left; margin-top: 20px;" class="header-style">Register</header>
-                <button onclick="quotePage()" style="float: right;
-                background: transparent;
-                border-radius: 5px;
-                outline: none;
-                border: 0px solid transparent;
-                color: white;
-                padding: 0px;">
+
+            
 <link rel="stylesheet" href="https://www.deliveryapp.com/wp-content/themes/deliveryapp/css/quick-quote.css" type="text/css">
                     <img style="height:25px; width: 25px;" src="https://unpkg.com/ionicons@5.5.1/dist/svg/close-circle-outline.svg" data-pagespeed-url-hash="3369767790" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
                 </button>
