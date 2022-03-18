@@ -1,3 +1,10 @@
+<div class="pb-lg-4 mb-5">
+          <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQPklmkB_SF3Sx00TNRzs21qrmR9DT2_s&amp;sensor=false&amp;libraries=places" type="text/javascript"></script>
+
+
+<link rel="stylesheet" href="https://www.deliveryapp.com/wp-content/themes/deliveryapp/css/quick-quote.css" type="text/css">
+
+
 <div id="framebody" class="fullwidth quick-quote-form">
     <div style="padding-bottom: 20px;" class="hidden" id="registrationPagePopup">
         <div id="registrationPage">
@@ -402,6 +409,8 @@
     </div>
 
 </div>
+
+
 <script>
 //declare html elements
 const registrationPagePopup = document.getElementById("registrationPagePopup");
@@ -1293,3 +1302,4 @@ function displayErrors() {
 <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
 </script>-->
+        </div>
